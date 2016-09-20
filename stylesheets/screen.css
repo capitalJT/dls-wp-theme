@@ -26,12 +26,44 @@
   background-color: blue;
 }
 
-/* line 7, ../sass/screen.scss */
+/* line 1, ../sass/layout/_footer.scss */
+.footer-widgets {
+  border: solid thin red;
+}
+
+/* line 5, ../sass/layout/_footer.scss */
+.wrap .footer-widgets-1 {
+  width: 100%;
+  background-color: orange;
+}
+/* line 8, ../sass/layout/_footer.scss */
+.wrap .footer-widgets-1 section {
+  border: solid thin blue;
+  background-color: yellow;
+  padding: 10px;
+  width: 50%;
+  display: inline-block;
+}
+/* line 15, ../sass/layout/_footer.scss */
+.wrap .footer-widgets-1 .widget {
+  margin-bottom: 0;
+  float: left;
+}
+/* line 19, ../sass/layout/_footer.scss */
+.wrap .footer-widgets-1 .widget-title {
+  display: none;
+}
+/* line 23, ../sass/layout/_footer.scss */
+.wrap .footer-widgets-1 #nav_menu-4 li {
+  display: inline-block;
+}
+
+/* line 8, ../sass/screen.scss */
 h1.entry-title {
   background-color: pink;
 }
 
-/* line 11, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 .menu-elements-side-bar-menu-container {
   background-color: #eee;
 }

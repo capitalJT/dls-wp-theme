@@ -1,0 +1,32 @@
+.footer-widgets{
+  border: solid thin red;
+}
+
+.wrap .footer-widgets-1{
+  width: 100%;
+  background-color: orange;
+  section{
+    border: solid thin blue;
+    background-color: yellow;
+    padding: 10px;
+    width: 50%;
+    display: inline-block;
+  }
+  .widget{
+    margin-bottom: 0;
+    float: left;
+  }
+  .widget-title{
+    display: none;
+  }
+  #nav_menu-4{
+    li{
+      display: inline-block;
+    }
+  }
+  #text-3{}
+}
+
+.footer-widgets-2{}
+
+.footer-widgets-3{}
