@@ -125,6 +125,12 @@ genesis_register_widget_area( array(
 ) );
 
 genesis_register_widget_area( array(
+	'id'          => 'print-sidebar',
+	'name'        => __( 'Print Sidebar', 'Genesis Sample' ),
+	'description' => __( 'This is the print sidebar', 'Genesis Sample' ),
+) );
+
+genesis_register_widget_area( array(
 	'id'          => 'elements-sidebar',
 	'name'        => __( 'Elements Side Bar', 'Genesis Sample' ),
 	'description' => __( 'This widget area appears next to the content in the Elements Page Template', 'Genesis Sample' ),

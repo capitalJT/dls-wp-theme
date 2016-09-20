@@ -1,13 +1,37 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 8, ../sass/screen.scss */
+/* line 1, ../sass/print/_print-menu.scss */
+.print-menu {
+  border: solid thin green;
+  background-color: yellow;
+  text-align: right;
+}
+/* line 5, ../sass/print/_print-menu.scss */
+.print-menu li {
+  display: inline-block;
+}
+/* line 8, ../sass/print/_print-menu.scss */
+.print-menu li a {
+  padding: 10px 15px;
+  border: solid thin orange;
+  display: inline-block;
+}
+/* line 14, ../sass/print/_print-menu.scss */
+.print-menu .widget ul > li {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* line 1, ../sass/print/_print-sidebar.scss */
+.print-sidebar {
+  border: solid thin green;
+  background-color: blue;
+}
+
+/* line 7, ../sass/screen.scss */
 h1.entry-title {
   background-color: pink;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 11, ../sass/screen.scss */
 .menu-elements-side-bar-menu-container {
   background-color: #eee;
 }

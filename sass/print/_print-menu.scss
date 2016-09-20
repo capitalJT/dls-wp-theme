@@ -1,0 +1,18 @@
+.print-menu{
+  border: solid thin green;
+  background-color: yellow;
+  text-align: right;
+  li{
+    display: inline-block;
+    // border: solid thin red;
+    a{
+      padding: 10px 15px;
+      border: solid thin orange;
+      display: inline-block;
+    }
+  }
+  .widget ul > li{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

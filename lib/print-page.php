@@ -35,11 +35,20 @@ function components_loop(){
 // remove Primary Sidebar from the Primary Sidebar area
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 
-add_action( 'genesis_before_content', 'childtextdomain_about_widget_area' );
-function childtextdomain_about_widget_area() {
+add_action( 'genesis_before_content', 'dls_print_menu' );
+function dls_print_menu() {
     genesis_widget_area( 'print-menu', array(
-		'before' => '<aside class="print-sidebar widget-area"><div class="wrap">',
-		'after'  => '</div></aside>', 
+		'before' => '<div class="print-menu widget-area"><div class="wrap">',
+		'after'  => '</div></div>', 
 	) );
+}
+
+add_action( 'genesis_after_content', 'dls_print_sidebar' );
+function dls_print_sidebar() {
+
+    genesis_widget_area( 'print-sidebar', array(
+		'before' => '<aside class="print-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
+		'after'  => '</div></aside><script src="'. get_stylesheet_directory_uri() .'/js/app.js"></script>', 
+	) );  
 }
 genesis();
