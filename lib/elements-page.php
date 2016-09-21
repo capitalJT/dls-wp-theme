@@ -41,7 +41,6 @@ function childtextdomain_about_widget_area() {
     genesis_widget_area( 'elements-sidebar', array(
 		'before' => '<aside class="elements-sidebar widget-area"><div class="wrap">',
 		'after'  => '</div></aside><script src="'. get_stylesheet_directory_uri() .'/js/app.js"></script>', 
-	) );
-    
+	) );  
 }
 genesis();

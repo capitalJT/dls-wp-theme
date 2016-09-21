@@ -34,12 +34,10 @@
 /* line 5, ../sass/layout/_footer.scss */
 .wrap .footer-widgets-1 {
   width: 100%;
-  background-color: orange;
 }
 /* line 8, ../sass/layout/_footer.scss */
 .wrap .footer-widgets-1 section {
   border: solid thin blue;
-  background-color: yellow;
   padding: 10px;
   width: 50%;
   display: inline-block;
@@ -58,12 +56,404 @@
   display: inline-block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 38, ../sass/layout/_footer.scss */
+#genesis-footer-widgets .social-list {
+  text-align: right;
+}
+/* line 40, ../sass/layout/_footer.scss */
+#genesis-footer-widgets .social-list li {
+  display: inline-block;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+/* line 45, ../sass/layout/_footer.scss */
+#genesis-footer-widgets .social-list a {
+  text-decoration: none;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #eee;
+  border: solid thin #ddd;
+}
+
+/* line 57, ../sass/layout/_footer.scss */
+.footer-widgets-2 {
+  border: solid thin #ddd;
+  background-color: #eee;
+  width: 66.66%;
+}
+
+/* line 68, ../sass/layout/_footer.scss */
+.footer-links.network,
+.footer-links.channels {
+  float: left;
+}
+
+/* line 72, ../sass/layout/_footer.scss */
+.footer-links {
+  margin-bottom: 15px;
+}
+
+/* line 75, ../sass/layout/_footer.scss */
+.footer-links.network {
+  width: 33.33%;
+}
+
+/* line 78, ../sass/layout/_footer.scss */
+.footer-links.channels {
+  width: 66.66%;
+}
+/* line 80, ../sass/layout/_footer.scss */
+.footer-links.channels .footer-list-wrapper {
+  float: left;
+}
+/* line 83, ../sass/layout/_footer.scss */
+.footer-links.channels .channels-list {
+  width: 33.33%;
+}
+/* line 86, ../sass/layout/_footer.scss */
+.footer-links.channels .channels-cont-list {
+  width: 66.66%;
+}
+
+/* line 90, ../sass/layout/_footer.scss */
+.footer-widgets-2 .widget-wrap {
+  padding: 15px;
+}
+
+@font-face {
+  font-family: "ajmn-font";
+  src: url("../fonts/ajmn-icon-font.eot");
+  src: url("../fonts/ajmn-icon-font.eot?#iefix") format("embedded-opentype"), url("../fonts/ajmn-icon-font.woff") format("woff"), url("../fonts/ajmn-icon-font.ttf") format("truetype"), url("../fonts/ajmn-icon-font.svg#ajmn-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 14, ../sass/_font.scss */
+[data-icon]:before {
+  font-family: "ajmn-font" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 27, ../sass/_font.scss */
+[class^="ajmn-"]:before,
+[class*=" ajmn-"]:before {
+  font-family: "ajmn-font" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 40, ../sass/_font.scss */
+.ajmn-alert:before {
+  content: "a";
+}
+
+/* line 43, ../sass/_font.scss */
+.ajmn-arrow:before {
+  content: "b";
+}
+
+/* line 46, ../sass/_font.scss */
+.ajmn-arrow-ring:before {
+  content: "c";
+}
+
+/* line 49, ../sass/_font.scss */
+.ajmn-avatar:before {
+  content: "d";
+}
+
+/* line 52, ../sass/_font.scss */
+.ajmn-calendar:before {
+  content: "e";
+}
+
+/* line 55, ../sass/_font.scss */
+.ajmn-caret-down:before {
+  content: "f";
+}
+
+/* line 58, ../sass/_font.scss */
+.ajmn-caret-left:before {
+  content: "g";
+}
+
+/* line 61, ../sass/_font.scss */
+.ajmn-caret-right:before {
+  content: "h";
+}
+
+/* line 64, ../sass/_font.scss */
+.ajmn-caret-up:before {
+  content: "i";
+}
+
+/* line 67, ../sass/_font.scss */
+.ajmn-chat:before {
+  content: "j";
+}
+
+/* line 70, ../sass/_font.scss */
+.ajmn-chevron-left:before {
+  content: "k";
+}
+
+/* line 73, ../sass/_font.scss */
+.ajmn-chevron-right:before {
+  content: "l";
+}
+
+/* line 76, ../sass/_font.scss */
+.ajmn-clock:before {
+  content: "m";
+}
+
+/* line 79, ../sass/_font.scss */
+.ajmn-closed-quotes:before {
+  content: "n";
+}
+
+/* line 82, ../sass/_font.scss */
+.ajmn-double-chevron-left:before {
+  content: "o";
+}
+
+/* line 85, ../sass/_font.scss */
+.ajmn-double-chevron-right:before {
+  content: "p";
+}
+
+/* line 88, ../sass/_font.scss */
+.ajmn-download:before {
+  content: "q";
+}
+
+/* line 91, ../sass/_font.scss */
+.ajmn-expand:before {
+  content: "r";
+}
+
+/* line 94, ../sass/_font.scss */
+.ajmn-facebook:before {
+  content: "s";
+}
+
+/* line 97, ../sass/_font.scss */
+.ajmn-fast-forward:before {
+  content: "t";
+}
+
+/* line 100, ../sass/_font.scss */
+.ajmn-forward:before {
+  content: "u";
+}
+
+/* line 103, ../sass/_font.scss */
+.ajmn-google-plus:before {
+  content: "v";
+}
+
+/* line 106, ../sass/_font.scss */
+.ajmn-grid:before {
+  content: "w";
+}
+
+/* line 109, ../sass/_font.scss */
+.ajmn-info:before {
+  content: "x";
+}
+
+/* line 112, ../sass/_font.scss */
+.ajmn-instagram:before {
+  content: "y";
+}
+
+/* line 115, ../sass/_font.scss */
+.ajmn-justified:before {
+  content: "z";
+}
+
+/* line 118, ../sass/_font.scss */
+.ajmn-left-aligned:before {
+  content: "A";
+}
+
+/* line 121, ../sass/_font.scss */
+.ajmn-linkedin:before {
+  content: "B";
+}
+
+/* line 124, ../sass/_font.scss */
+.ajmn-list:before {
+  content: "C";
+}
+
+/* line 127, ../sass/_font.scss */
+.ajmn-live-feed:before {
+  content: "D";
+}
+
+/* line 130, ../sass/_font.scss */
+.ajmn-location:before {
+  content: "E";
+}
+
+/* line 133, ../sass/_font.scss */
+.ajmn-mail:before {
+  content: "F";
+}
+
+/* line 136, ../sass/_font.scss */
+.ajmn-menu:before {
+  content: "G";
+}
+
+/* line 139, ../sass/_font.scss */
+.ajmn-more:before {
+  content: "H";
+}
+
+/* line 142, ../sass/_font.scss */
+.ajmn-open-quotes:before {
+  content: "I";
+}
+
+/* line 145, ../sass/_font.scss */
+.ajmn-pause:before {
+  content: "J";
+}
+
+/* line 148, ../sass/_font.scss */
+.ajmn-photo:before {
+  content: "K";
+}
+
+/* line 151, ../sass/_font.scss */
+.ajmn-photo-gallery:before {
+  content: "L";
+}
+
+/* line 154, ../sass/_font.scss */
+.ajmn-play:before {
+  content: "M";
+}
+
+/* line 157, ../sass/_font.scss */
+.ajmn-plus:before {
+  content: "N";
+}
+
+/* line 160, ../sass/_font.scss */
+.ajmn-printer:before {
+  content: "O";
+}
+
+/* line 163, ../sass/_font.scss */
+.ajmn-record:before {
+  content: "P";
+}
+
+/* line 166, ../sass/_font.scss */
+.ajmn-refresh:before {
+  content: "Q";
+}
+
+/* line 169, ../sass/_font.scss */
+.ajmn-rewind:before {
+  content: "R";
+}
+
+/* line 172, ../sass/_font.scss */
+.ajmn-right-aligned:before {
+  content: "S";
+}
+
+/* line 175, ../sass/_font.scss */
+.ajmn-rss:before {
+  content: "T";
+}
+
+/* line 178, ../sass/_font.scss */
+.ajmn-search:before {
+  content: "U";
+}
+
+/* line 181, ../sass/_font.scss */
+.ajmn-settings:before {
+  content: "V";
+}
+
+/* line 184, ../sass/_font.scss */
+.ajmn-share:before {
+  content: "W";
+}
+
+/* line 187, ../sass/_font.scss */
+.ajmn-star:before {
+  content: "X";
+}
+
+/* line 190, ../sass/_font.scss */
+.ajmn-stop:before {
+  content: "Y";
+}
+
+/* line 193, ../sass/_font.scss */
+.ajmn-trash:before {
+  content: "Z";
+}
+
+/* line 196, ../sass/_font.scss */
+.ajmn-twitter:before {
+  content: "0";
+}
+
+/* line 199, ../sass/_font.scss */
+.ajmn-video:before {
+  content: "1";
+}
+
+/* line 202, ../sass/_font.scss */
+.ajmn-video-gallery:before {
+  content: "2";
+}
+
+/* line 205, ../sass/_font.scss */
+.ajmn-volume:before {
+  content: "3";
+}
+
+/* line 208, ../sass/_font.scss */
+.ajmn-volume-up:before {
+  content: "4";
+}
+
+/* line 211, ../sass/_font.scss */
+.ajmn-youtube:before {
+  content: "5";
+}
+
+/* line 10, ../sass/screen.scss */
 h1.entry-title {
   background-color: pink;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 .menu-elements-side-bar-menu-container {
   background-color: #eee;
 }
