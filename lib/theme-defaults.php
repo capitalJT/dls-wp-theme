@@ -1,10 +1,10 @@
 <?php
 /**
- * Genesis Sample.
+ * DLS Theme.
  *
- * This file adds the default theme settings to the Genesis Sample Theme.
+ * This file adds the default theme settings to the DLS Theme.
  *
- * @package Genesis Sample
+ * @package DLS Theme
  * @author  StudioPress
  * @license GPL-2.0+
  * @link    http://www.studiopress.com/

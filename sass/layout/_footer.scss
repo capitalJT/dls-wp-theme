@@ -1,10 +1,27 @@
 .footer-widgets{
   border: solid thin red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .wrap{
+    max-width: 100%;
+  }
+  .widget ul > li{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .footer-widgets-1{
+    // border: solid thick green;
+    max-width: 1280px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+  }
 }
 
 .wrap .footer-widgets-1{
   width: 100%;
-  // background-color: orange;
+  background-color: orange;
   section{
     border: solid thin green;
     // background-color: yellow;

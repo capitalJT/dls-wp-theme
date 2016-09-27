@@ -17,10 +17,24 @@
   background-color: blue; }
 
 .footer-widgets {
-  border: solid thin red; }
+  border: solid thin red;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .footer-widgets .wrap {
+    max-width: 100%; }
+  .footer-widgets .widget ul > li {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .footer-widgets .footer-widgets-1 {
+    max-width: 1280px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px; }
 
 .wrap .footer-widgets-1 {
-  width: 100%; }
+  width: 100%;
+  background-color: orange; }
   .wrap .footer-widgets-1 section {
     border: solid thin green;
     padding: 10px;
@@ -294,10 +308,6 @@
 .ajmn-youtube:before {
   content: "5"; }
 
-.title-area {
-  border: solid thin red;
-  width: 360px; }
-
 .logo-wrapper {
   border: solid thin red;
   background-color: pink; }
@@ -316,8 +326,8 @@
     .site-search .search-form input[type="search"] {
       width: 300px; }
 
-h1.entry-title {
-  background-color: pink; }
+header.site-header {
+  background-color: #000E56; }
 
 .menu-elements-side-bar-menu-container {
   background-color: #eee; }

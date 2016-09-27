@@ -1,10 +1,10 @@
 <?php
 /**
- * Genesis Sample.
+ * DLS Theme.
  *
- * This file adds functions to the Genesis Sample Theme.
+ * This file adds functions to the DLS Theme Theme.
  *
- * @package Genesis Sample
+ * @package DLS Theme
  * @author  StudioPress
  * @license GPL-2.0+
  * @link    http://www.studiopress.com/
@@ -26,7 +26,7 @@ require_once( get_stylesheet_directory() . '/lib/customize.php' );
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Genesis Sample' );
+define( 'CHILD_THEME_NAME', 'DLS Theme' );
 define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
 define( 'CHILD_THEME_VERSION', '2.2.4' );
 
@@ -126,7 +126,7 @@ remove_action( 'genesis_header', 'genesis_do_header' );
 add_action( 'genesis_header', 'jt_header_image' );
 function jt_header_image() {
 	$name = get_bloginfo('name');
-	$description = get_bloginfo('description');
+	// $description = get_bloginfo('description');
 	echo '<div class="logo-wrapper">';
   echo '<img class="site-logo" src="' . get_stylesheet_directory_uri() . '/images/AJMN-logo.png" alt="AJMN Logo">';
   echo '<div class="site-name">'. $name .'</div>';
@@ -139,18 +139,18 @@ function jt_header_image() {
 
 genesis_register_widget_area( array(
 	'id'          => 'print-menu',
-	'name'        => __( 'Print Menu', 'Genesis Sample' ),
-	'description' => __( 'This is the print menu', 'Genesis Sample' ),
+	'name'        => __( 'Print Menu', 'DLS Theme' ),
+	'description' => __( 'This is the print menu', 'DLS Theme' ),
 ) );
 
 genesis_register_widget_area( array(
 	'id'          => 'print-sidebar',
-	'name'        => __( 'Print Sidebar', 'Genesis Sample' ),
-	'description' => __( 'This is the print sidebar', 'Genesis Sample' ),
+	'name'        => __( 'Print Sidebar', 'DLS Theme' ),
+	'description' => __( 'This is the print sidebar', 'DLS Theme' ),
 ) );
 
 genesis_register_widget_area( array(
 	'id'          => 'elements-sidebar',
-	'name'        => __( 'Elements Side Bar', 'Genesis Sample' ),
-	'description' => __( 'This widget area appears next to the content in the Elements Page Template', 'Genesis Sample' ),
+	'name'        => __( 'Elements Side Bar', 'DLS Theme' ),
+	'description' => __( 'This widget area appears next to the content in the Elements Page Template', 'DLS Theme' ),
 ) );

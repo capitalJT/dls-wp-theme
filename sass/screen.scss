@@ -6,10 +6,6 @@
 @import "font";
 // @import "fontastic";
 
-.title-area{
-  border: solid thin red;
-  width: 360px;
-}
 
 .logo-wrapper{
   border: solid thin red;
@@ -21,6 +17,7 @@
     height: auto;
   }
 }
+
 .site-search{
   background-color: orange;
   .search-form{
@@ -33,9 +30,13 @@
     }
   }
 }
-h1.entry-title{
-  background-color: pink;
+
+header.site-header{
+  background-color: #000E56;
 }
+// h1.entry-title{
+//   background-color: pink;
+// }
 
 .menu-elements-side-bar-menu-container{
   background-color: #eee;
