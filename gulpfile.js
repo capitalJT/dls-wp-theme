@@ -69,7 +69,7 @@ gulp.task('reload', function () {
 gulp.task('watch', function () {
   gulp.watch(['sass/*.scss', 'sass/**/*.scss'], ['sass']);
   gulp.watch(['sass/*.scss', 'sass/**/*.scss']).on('change', browserSync.reload);
-  // gulp.watch('**/*.{php,inc,info}',['reload']);
+  gulp.watch('**/*.{php,inc,info}',['reload']);
 });
 
 

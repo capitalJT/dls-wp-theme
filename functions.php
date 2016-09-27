@@ -60,10 +60,11 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for custom header
 add_theme_support( 'custom-header', array(
+	'default-image' => get_stylesheet_directory_uri() . '/images/AJMN-logo.png',
 	'width'           => 600,
 	'height'          => 160,
 	'header-selector' => '.site-title a',
-	'header-text'     => false,
+	'header-text'     => true,
 	'flex-height'     => true,
 ) );
 
@@ -117,6 +118,24 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+/**
+ * Rewrite the site header to include an image
+ */
+remove_action( 'genesis_header', 'genesis_do_header' );
+add_action( 'genesis_header', 'jt_header_image' );
+function jt_header_image() {
+	$name = get_bloginfo('name');
+	$description = get_bloginfo('description');
+	echo '<div class="logo-wrapper">';
+  echo '<img class="site-logo" src="' . get_stylesheet_directory_uri() . '/images/AJMN-logo.png" alt="AJMN Logo">';
+  echo '<div class="site-name">'. $name .'</div>';
+  // echo '<div class="site-description">'. $description .'</div>';
+  echo '</div>';
+  echo '<div class="site-search">'. get_search_form( $echo ) .'</div>';
+  echo '</div>';
+}
+
 
 genesis_register_widget_area( array(
 	'id'          => 'print-menu',

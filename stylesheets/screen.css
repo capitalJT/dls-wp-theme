@@ -295,7 +295,26 @@
   content: "5"; }
 
 .title-area {
-  border: solid thin red; }
+  border: solid thin red;
+  width: 360px; }
+
+.logo-wrapper {
+  border: solid thin red;
+  background-color: pink; }
+  .logo-wrapper img {
+    border: solid thin green;
+    float: left;
+    width: 50px;
+    height: auto; }
+
+.site-search {
+  background-color: orange; }
+  .site-search .search-form {
+    float: none; }
+    .site-search .search-form input {
+      float: left; }
+    .site-search .search-form input[type="search"] {
+      width: 300px; }
 
 h1.entry-title {
   background-color: pink; }
