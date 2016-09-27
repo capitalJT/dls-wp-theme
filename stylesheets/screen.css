@@ -1,136 +1,101 @@
-/* line 1, ../sass/print/_print-menu.scss */
 .print-menu {
   border: solid thin green;
   background-color: yellow;
-  text-align: right;
-}
-/* line 5, ../sass/print/_print-menu.scss */
-.print-menu li {
-  display: inline-block;
-}
-/* line 8, ../sass/print/_print-menu.scss */
-.print-menu li a {
-  padding: 10px 15px;
-  border: solid thin orange;
-  display: inline-block;
-}
-/* line 14, ../sass/print/_print-menu.scss */
-.print-menu .widget ul > li {
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
+  text-align: right; }
+  .print-menu li {
+    display: inline-block; }
+    .print-menu li a {
+      padding: 10px 15px;
+      border: solid thin orange;
+      display: inline-block; }
+  .print-menu .widget ul > li {
+    padding-bottom: 0;
+    margin-bottom: 0; }
 
-/* line 1, ../sass/print/_print-sidebar.scss */
 .print-sidebar {
   border: solid thin green;
-  background-color: blue;
-}
+  background-color: blue; }
 
-/* line 1, ../sass/layout/_footer.scss */
 .footer-widgets {
-  border: solid thin red;
-}
+  border: solid thin red; }
 
-/* line 5, ../sass/layout/_footer.scss */
 .wrap .footer-widgets-1 {
-  width: 100%;
-}
-/* line 8, ../sass/layout/_footer.scss */
-.wrap .footer-widgets-1 section {
-  border: solid thin blue;
-  padding: 10px;
-  width: 50%;
-  display: inline-block;
-}
-/* line 15, ../sass/layout/_footer.scss */
-.wrap .footer-widgets-1 .widget {
-  margin-bottom: 0;
-  float: left;
-}
-/* line 19, ../sass/layout/_footer.scss */
-.wrap .footer-widgets-1 .widget-title {
-  display: none;
-}
-/* line 23, ../sass/layout/_footer.scss */
-.wrap .footer-widgets-1 #nav_menu-4 li {
-  display: inline-block;
-}
+  width: 100%; }
+  .wrap .footer-widgets-1 section {
+    border: solid thin green;
+    padding: 10px;
+    width: 50%;
+    display: inline-block; }
+  .wrap .footer-widgets-1 .widget {
+    margin-bottom: 0;
+    float: left; }
+  .wrap .footer-widgets-1 .widget-title {
+    display: none; }
+  .wrap .footer-widgets-1 #nav_menu-4 li {
+    display: inline-block; }
 
-/* line 38, ../sass/layout/_footer.scss */
 #genesis-footer-widgets .social-list {
-  text-align: right;
-}
-/* line 40, ../sass/layout/_footer.scss */
-#genesis-footer-widgets .social-list li {
-  display: inline-block;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-/* line 45, ../sass/layout/_footer.scss */
-#genesis-footer-widgets .social-list a {
-  text-decoration: none;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  background-color: #eee;
-  border: solid thin #ddd;
-}
+  text-align: right; }
+  #genesis-footer-widgets .social-list li {
+    display: inline-block;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  #genesis-footer-widgets .social-list a {
+    text-decoration: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #eee;
+    border: solid thin #ddd; }
 
-/* line 57, ../sass/layout/_footer.scss */
 .footer-widgets-2 {
   border: solid thin #ddd;
   background-color: #eee;
-  width: 66.66%;
-}
+  width: 60%; }
 
-/* line 68, ../sass/layout/_footer.scss */
 .footer-links.network,
 .footer-links.channels {
-  float: left;
-}
+  float: left; }
 
-/* line 72, ../sass/layout/_footer.scss */
 .footer-links {
-  margin-bottom: 15px;
-}
+  margin-bottom: 15px; }
 
-/* line 75, ../sass/layout/_footer.scss */
 .footer-links.network {
-  width: 33.33%;
-}
+  width: 33.33%; }
 
-/* line 78, ../sass/layout/_footer.scss */
 .footer-links.channels {
-  width: 66.66%;
-}
-/* line 80, ../sass/layout/_footer.scss */
-.footer-links.channels .footer-list-wrapper {
-  float: left;
-}
-/* line 83, ../sass/layout/_footer.scss */
-.footer-links.channels .channels-list {
-  width: 33.33%;
-}
-/* line 86, ../sass/layout/_footer.scss */
-.footer-links.channels .channels-cont-list {
-  width: 66.66%;
-}
+  width: 66.66%; }
+  .footer-links.channels .footer-list-wrapper {
+    float: left; }
+  .footer-links.channels .channels-list {
+    width: 33.33%; }
+  .footer-links.channels .channels-cont-list {
+    width: 66.66%; }
 
-/* line 90, ../sass/layout/_footer.scss */
 .footer-widgets-2 .widget-wrap {
-  padding: 15px;
-}
+  padding: 15px; }
+
+.footer-widgets-3 {
+  width: 40%;
+  border: solid thin red;
+  background-color: #bbb; }
+
+.footer-logo {
+  text-align: right; }
+  .footer-logo a {
+    border: solid thin green;
+    display: block;
+    margin-top: 30px; }
 
 @font-face {
   font-family: "ajmn-font";
   src: url("../fonts/ajmn-icon-font.eot");
   src: url("../fonts/ajmn-icon-font.eot?#iefix") format("embedded-opentype"), url("../fonts/ajmn-icon-font.woff") format("woff"), url("../fonts/ajmn-icon-font.ttf") format("truetype"), url("../fonts/ajmn-icon-font.svg#ajmn-font") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
-/* line 14, ../sass/_font.scss */
+  font-style: normal; }
+
 [data-icon]:before {
   font-family: "ajmn-font" !important;
   content: attr(data-icon);
@@ -141,10 +106,8 @@
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
-/* line 27, ../sass/_font.scss */
 [class^="ajmn-"]:before,
 [class*=" ajmn-"]:before {
   font-family: "ajmn-font" !important;
@@ -155,305 +118,187 @@
   speak: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
-/* line 40, ../sass/_font.scss */
 .ajmn-alert:before {
-  content: "a";
-}
+  content: "a"; }
 
-/* line 43, ../sass/_font.scss */
 .ajmn-arrow:before {
-  content: "b";
-}
+  content: "b"; }
 
-/* line 46, ../sass/_font.scss */
 .ajmn-arrow-ring:before {
-  content: "c";
-}
+  content: "c"; }
 
-/* line 49, ../sass/_font.scss */
 .ajmn-avatar:before {
-  content: "d";
-}
+  content: "d"; }
 
-/* line 52, ../sass/_font.scss */
 .ajmn-calendar:before {
-  content: "e";
-}
+  content: "e"; }
 
-/* line 55, ../sass/_font.scss */
 .ajmn-caret-down:before {
-  content: "f";
-}
+  content: "f"; }
 
-/* line 58, ../sass/_font.scss */
 .ajmn-caret-left:before {
-  content: "g";
-}
+  content: "g"; }
 
-/* line 61, ../sass/_font.scss */
 .ajmn-caret-right:before {
-  content: "h";
-}
+  content: "h"; }
 
-/* line 64, ../sass/_font.scss */
 .ajmn-caret-up:before {
-  content: "i";
-}
+  content: "i"; }
 
-/* line 67, ../sass/_font.scss */
 .ajmn-chat:before {
-  content: "j";
-}
+  content: "j"; }
 
-/* line 70, ../sass/_font.scss */
 .ajmn-chevron-left:before {
-  content: "k";
-}
+  content: "k"; }
 
-/* line 73, ../sass/_font.scss */
 .ajmn-chevron-right:before {
-  content: "l";
-}
+  content: "l"; }
 
-/* line 76, ../sass/_font.scss */
 .ajmn-clock:before {
-  content: "m";
-}
+  content: "m"; }
 
-/* line 79, ../sass/_font.scss */
 .ajmn-closed-quotes:before {
-  content: "n";
-}
+  content: "n"; }
 
-/* line 82, ../sass/_font.scss */
 .ajmn-double-chevron-left:before {
-  content: "o";
-}
+  content: "o"; }
 
-/* line 85, ../sass/_font.scss */
 .ajmn-double-chevron-right:before {
-  content: "p";
-}
+  content: "p"; }
 
-/* line 88, ../sass/_font.scss */
 .ajmn-download:before {
-  content: "q";
-}
+  content: "q"; }
 
-/* line 91, ../sass/_font.scss */
 .ajmn-expand:before {
-  content: "r";
-}
+  content: "r"; }
 
-/* line 94, ../sass/_font.scss */
 .ajmn-facebook:before {
-  content: "s";
-}
+  content: "s"; }
 
-/* line 97, ../sass/_font.scss */
 .ajmn-fast-forward:before {
-  content: "t";
-}
+  content: "t"; }
 
-/* line 100, ../sass/_font.scss */
 .ajmn-forward:before {
-  content: "u";
-}
+  content: "u"; }
 
-/* line 103, ../sass/_font.scss */
 .ajmn-google-plus:before {
-  content: "v";
-}
+  content: "v"; }
 
-/* line 106, ../sass/_font.scss */
 .ajmn-grid:before {
-  content: "w";
-}
+  content: "w"; }
 
-/* line 109, ../sass/_font.scss */
 .ajmn-info:before {
-  content: "x";
-}
+  content: "x"; }
 
-/* line 112, ../sass/_font.scss */
 .ajmn-instagram:before {
-  content: "y";
-}
+  content: "y"; }
 
-/* line 115, ../sass/_font.scss */
 .ajmn-justified:before {
-  content: "z";
-}
+  content: "z"; }
 
-/* line 118, ../sass/_font.scss */
 .ajmn-left-aligned:before {
-  content: "A";
-}
+  content: "A"; }
 
-/* line 121, ../sass/_font.scss */
 .ajmn-linkedin:before {
-  content: "B";
-}
+  content: "B"; }
 
-/* line 124, ../sass/_font.scss */
 .ajmn-list:before {
-  content: "C";
-}
+  content: "C"; }
 
-/* line 127, ../sass/_font.scss */
 .ajmn-live-feed:before {
-  content: "D";
-}
+  content: "D"; }
 
-/* line 130, ../sass/_font.scss */
 .ajmn-location:before {
-  content: "E";
-}
+  content: "E"; }
 
-/* line 133, ../sass/_font.scss */
 .ajmn-mail:before {
-  content: "F";
-}
+  content: "F"; }
 
-/* line 136, ../sass/_font.scss */
 .ajmn-menu:before {
-  content: "G";
-}
+  content: "G"; }
 
-/* line 139, ../sass/_font.scss */
 .ajmn-more:before {
-  content: "H";
-}
+  content: "H"; }
 
-/* line 142, ../sass/_font.scss */
 .ajmn-open-quotes:before {
-  content: "I";
-}
+  content: "I"; }
 
-/* line 145, ../sass/_font.scss */
 .ajmn-pause:before {
-  content: "J";
-}
+  content: "J"; }
 
-/* line 148, ../sass/_font.scss */
 .ajmn-photo:before {
-  content: "K";
-}
+  content: "K"; }
 
-/* line 151, ../sass/_font.scss */
 .ajmn-photo-gallery:before {
-  content: "L";
-}
+  content: "L"; }
 
-/* line 154, ../sass/_font.scss */
 .ajmn-play:before {
-  content: "M";
-}
+  content: "M"; }
 
-/* line 157, ../sass/_font.scss */
 .ajmn-plus:before {
-  content: "N";
-}
+  content: "N"; }
 
-/* line 160, ../sass/_font.scss */
 .ajmn-printer:before {
-  content: "O";
-}
+  content: "O"; }
 
-/* line 163, ../sass/_font.scss */
 .ajmn-record:before {
-  content: "P";
-}
+  content: "P"; }
 
-/* line 166, ../sass/_font.scss */
 .ajmn-refresh:before {
-  content: "Q";
-}
+  content: "Q"; }
 
-/* line 169, ../sass/_font.scss */
 .ajmn-rewind:before {
-  content: "R";
-}
+  content: "R"; }
 
-/* line 172, ../sass/_font.scss */
 .ajmn-right-aligned:before {
-  content: "S";
-}
+  content: "S"; }
 
-/* line 175, ../sass/_font.scss */
 .ajmn-rss:before {
-  content: "T";
-}
+  content: "T"; }
 
-/* line 178, ../sass/_font.scss */
 .ajmn-search:before {
-  content: "U";
-}
+  content: "U"; }
 
-/* line 181, ../sass/_font.scss */
 .ajmn-settings:before {
-  content: "V";
-}
+  content: "V"; }
 
-/* line 184, ../sass/_font.scss */
 .ajmn-share:before {
-  content: "W";
-}
+  content: "W"; }
 
-/* line 187, ../sass/_font.scss */
 .ajmn-star:before {
-  content: "X";
-}
+  content: "X"; }
 
-/* line 190, ../sass/_font.scss */
 .ajmn-stop:before {
-  content: "Y";
-}
+  content: "Y"; }
 
-/* line 193, ../sass/_font.scss */
 .ajmn-trash:before {
-  content: "Z";
-}
+  content: "Z"; }
 
-/* line 196, ../sass/_font.scss */
 .ajmn-twitter:before {
-  content: "0";
-}
+  content: "0"; }
 
-/* line 199, ../sass/_font.scss */
 .ajmn-video:before {
-  content: "1";
-}
+  content: "1"; }
 
-/* line 202, ../sass/_font.scss */
 .ajmn-video-gallery:before {
-  content: "2";
-}
+  content: "2"; }
 
-/* line 205, ../sass/_font.scss */
 .ajmn-volume:before {
-  content: "3";
-}
+  content: "3"; }
 
-/* line 208, ../sass/_font.scss */
 .ajmn-volume-up:before {
-  content: "4";
-}
+  content: "4"; }
 
-/* line 211, ../sass/_font.scss */
 .ajmn-youtube:before {
-  content: "5";
-}
+  content: "5"; }
 
-/* line 10, ../sass/screen.scss */
+.title-area {
+  border: solid thin red; }
+
 h1.entry-title {
-  background-color: pink;
-}
+  background-color: pink; }
 
-/* line 14, ../sass/screen.scss */
 .menu-elements-side-bar-menu-container {
-  background-color: #eee;
-}
+  background-color: #eee; }

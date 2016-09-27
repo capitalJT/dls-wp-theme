@@ -1,0 +1,21 @@
+{
+  "name": "dls-genesis-theme",
+  "version": "0.0.1",
+  "description": "A custom WordPress theme",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.8.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-shell": "^0.4.2",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.3",
+    "jshint-stylish": "^2.2.1"
+  },
+  "author": "Jabal Torres",
+  "license": "ISC"
+}

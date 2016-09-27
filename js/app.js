@@ -5,7 +5,7 @@
 			// $(".textwidget").text("holy shit");
 			$('.textwidget').append('<ul id="contents-list"></ul>');
 
-			var someList = $(".component-title");
+			// var someList = $(".component-title");
 			// console.log(someList);
 			// for (i = 0; i < someList.length; i++) {
 			//   // $("#contents-list").append("<li>" +  someList[i]+ "</li>");

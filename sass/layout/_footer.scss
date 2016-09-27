@@ -6,7 +6,7 @@
   width: 100%;
   // background-color: orange;
   section{
-    border: solid thin blue;
+    border: solid thin green;
     // background-color: yellow;
     padding: 10px;
     width: 50%;
@@ -57,7 +57,7 @@
 .footer-widgets-2{
   border: solid thin #ddd;
   background-color: #eee;
-  width: 66.66%;
+  width: 60%;
 }
 .footer-list-wrapper{
   // width: 33.33%;
@@ -89,4 +89,30 @@
 }
 .footer-widgets-2 .widget-wrap{
   padding: 15px;
+}
+
+.footer-widgets-3{
+  width: 40%;
+  border: solid thin red;
+  background-color: #bbb;
+}
+.footer-logo{
+  // position: relative;
+  text-align: right;
+  a{
+    border: solid thin green;
+    display: block;
+    margin-top: 30px;
+    // position: relative;
+  }
+  img{
+    // position: absolute;
+    // right: 0;
+  }
+} 
+
+
+
+.footer-logo{
+
 }
