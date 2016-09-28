@@ -48,7 +48,8 @@ function dls_print_sidebar() {
 
     genesis_widget_area( 'print-sidebar', array(
 		'before' => '<aside class="print-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
-		'after'  => '</div></aside><script src="'. get_stylesheet_directory_uri() .'/js/app.js"></script>', 
+		// 'after'  => '</div></aside><script src="'. get_stylesheet_directory_uri() .'/js/app.js"></script>', 
+		'after'  => '</div></aside>', 
 	) );  
 }
 genesis();

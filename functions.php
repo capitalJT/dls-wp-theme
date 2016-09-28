@@ -39,8 +39,10 @@ function genesis_sample_enqueue_scripts_styles() {
 
 	wp_enqueue_style( 'custom-stylesheet', CHILD_URL . '/stylesheets/screen.css', array(), PARENT_THEME_VERSION );wp_enqueue_style( 'custom-stylesheet', CHILD_URL . '/stylesheets/screen.css', array(), PARENT_THEME_VERSION );
 
-
 	wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+
+	wp_enqueue_script( 'dls-scripts', get_stylesheet_directory_uri() . '/js/app.js', array( 'jquery' ), '1.0.0', true );
+
 	$output = array(
 		'mainMenu' => __( 'Menu', 'genesis-sample' ),
 		'subMenu'  => __( 'Menu', 'genesis-sample' ),
@@ -126,10 +128,11 @@ remove_action( 'genesis_header', 'genesis_do_header' );
 add_action( 'genesis_header', 'jt_header_image' );
 function jt_header_image() {
 	$name = get_bloginfo('name');
+	$url = get_bloginfo('url');
 	// $description = get_bloginfo('description');
 	echo '<div class="logo-wrapper">';
-  echo '<img class="site-logo" src="' . get_stylesheet_directory_uri() . '/images/AJMN-logo.png" alt="AJMN Logo">';
-  echo '<div class="site-name">'. $name .'</div>';
+  echo '<a href="'. $url .'"><img class="site-logo" src="' . get_stylesheet_directory_uri() . '/images/AJMN-logo.png" alt="AJMN Logo">';
+  echo '<div class="site-name">'. $name .'</div></a>';
   // echo '<div class="site-description">'. $description .'</div>';
   echo '</div>';
   echo '<div class="site-search">'. get_search_form( $echo ) .'</div>';
@@ -154,3 +157,29 @@ genesis_register_widget_area( array(
 	'name'        => __( 'Elements Side Bar', 'DLS Theme' ),
 	'description' => __( 'This widget area appears next to the content in the Elements Page Template', 'DLS Theme' ),
 ) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+//* Do NOT include the opening php tag
+//* Remove the site footer
+remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+//* Customize the site footer
+add_action( 'genesis_footer', 'bg_custom_footer' );
+function bg_custom_footer() { ?>
+
+	<div class="site-footer"><div class="wrap"><p>Handcrafted with <span class="dashicons dashicons-smiley"></span> by Jaballion. Powered by the <a href="#">DLS Platform</a>. <a href="http://briangardner.com/contact/">Get in Touch</a>.</p></div></div>
+
+<?php
+}

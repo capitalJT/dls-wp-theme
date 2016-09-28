@@ -1,7 +1,8 @@
 ( function ( document, $, undefined ) {
 	
 	$(document).ready(function(){
-		if ($(".print-sidebar").length){
+		// console.log("This is a test");
+		if ($('.print-sidebar').length){
 			// $(".textwidget").text("holy shit");
 			$('.textwidget').append('<ul id="contents-list"></ul>');
 
@@ -20,6 +21,18 @@
 			   $("#contents-list").append('<li><a href="#'+theId+'">'  + theText + '</a></li>');
 			});
 		}
+
+		$('#genesis-footer-widgets .footer-widgets-1').wrapInner('<div class="dls-container"></div>');
+
+		var dlsWidgetWrappers = $('<div class="dls-widget-outer-wrapper"><div class="dls-widget-inner-wrapper"></div></div>');
+
+		// dlsWidgetWrappers.appendTo('#genesis-footer-widgets .wrap');
+		$('#genesis-footer-widgets .wrap').append(dlsWidgetWrappers);
+
+		var widgies = $(".footer-widgets-2, .footer-widgets-3 ").detach();
+
+		$('.dls-widget-inner-wrapper').append(widgies);
+		console.log("check");
 	});
 
 })( document, jQuery );

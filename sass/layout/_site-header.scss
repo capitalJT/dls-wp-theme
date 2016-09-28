@@ -1,0 +1,49 @@
+.site-header{
+  background-color: $primary-color;
+  & > .wrap {
+    padding: 10px 0;
+  }
+  @include tablet{
+    // border: solid thick red;
+  }
+}
+
+.site-header .logo-wrapper{
+  height: 50px;
+  // background-color: pink;
+  .site-logo{
+    float: left;
+    margin-right: 10px;
+    width: 50px;
+    height: auto;
+  }
+  .site-name{
+    color: white;
+    @extend %h2-rwd;
+  }
+}
+
+.site-header .site-search{
+  // background-color: orange;
+  .search-form{
+    // border: solid thin grey;
+    float: none;
+    width: 400px;
+    float: right;
+    margin: 0;
+    input{
+      float: left;
+    }
+    input[type="search"]{
+      width: 300px;
+    }
+    input[type="submit"]{
+      margin-top: 0;
+    }
+  }
+  @include tablet {
+    width: 50%;
+    float: right;
+    margin-top: -50px;
+  }
+}

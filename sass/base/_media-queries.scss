@@ -1,0 +1,179 @@
+$sm-phone-width: 420px;
+$md-phone-width: 480px;
+$phablet-width: 520px;
+$tablet-width: 768px;
+$medium-width: 860px; 
+$desktop-width: 1024px;
+$large-width: 1280px;
+$xlarge-width: 1340px;
+
+@mixin sm-phone-only {
+  @media screen and (max-width: #{$sm-phone-width}) {
+    @content;
+  }
+}
+
+@mixin md-phone-only {
+  @media screen and (max-width: #{$md-phone-width}) {
+    @content;
+  }
+}
+
+@mixin phablet-up {
+  @media screen and (min-width: #{$phablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: #{$tablet-width}) and (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-max {
+  @media screen and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-max {
+  @media screen and (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media screen and (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin medium-only {
+  @media screen and (min-width: #{$medium-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+@mixin desktop-max {
+  @media screen and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin large-screen {
+  @media screen and (min-width: #{$large-width}) {
+    @content;
+  }
+}
+@mixin large-screen-max {
+  @media screen and (max-width: #{$large-width}) {
+    @content;
+  }
+}
+
+
+// https://www.sitepoint.com/managing-responsive-breakpoints-sass/
+//=====================================================================
+// Exlploring media queries as sass map
+//=====================================================================
+
+// $tablet-width: 768px;
+// $medium-width: 992px;
+// $desktop-width: 1024px;
+// $large-width: 1200px;
+
+$min-breakpoints: (
+  'small'  : ( min-width:  $tablet-width - 1px ),
+  'medium' : ( min-width:  $medium-width ),
+  'large'  : ( min-width: $large-width )
+);
+
+//=====================================================================
+// Sass function that uses the sass map in the media queries partial
+//=====================================================================
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($min-breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($min-breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+/* 
+* Sass functions to all allow nesting placeholders inside of 
+* media queries
+*
+* src: https://www.sitepoint.com/cross-media-query-extend-sass/
+*/
+
+$breakpoints: (
+  "small"  : $tablet-width,
+  "medium" : $medium-width,
+  "large"  : $large-width
+);
+
+$default-breakpoint: root;
+$current-breakpoint: $default-breakpoint;
+
+$placeholders: ();
+
+@mixin breakpoint($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  
+  @if $value != null {
+    $current-breakpoint: $breakpoint         !global;
+    @media (min-width: $value) { @content; }
+    $current-breakpoint: $default-breakpoint !global;
+  }
+
+  @else {
+    @warn "Invalid breakpoint `#{$breakpoint}`.";
+  }
+}
+
+@mixin placeholder($name) {
+  @if not index($placeholders, $name) {                  
+    $placeholders: append($placeholders, $name) !global; 
+    
+    @at-root {
+      @each $breakpoint, $value in $breakpoints {        
+        @media (min-width: $value) {                     
+          %#{$name}-#{$breakpoint} {                     
+            @content;                                    
+          }
+        }
+      }
+    
+      %#{$name}-#{$default-breakpoint} {                 
+        @content;
+      }
+    }
+  }
+  
+  @else {
+    @warn "Placeholder `#{$name}` already exists.";      
+  }
+}
+
+@mixin _($name) {
+  @extend %#{$name}-#{$current-breakpoint} !optional;
+}

@@ -1,7 +1,9 @@
 .footer-widgets{
-  border: solid thin red;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  // background-color: #fff;
+  // font-size: 18px;
+  // font-size: 1.8rem;
+  // clear: both;
+  padding: 0;
   .wrap{
     max-width: 100%;
   }
@@ -10,22 +12,25 @@
     margin-bottom: 0;
   }
   .footer-widgets-1{
-    // border: solid thick green;
-    max-width: 1280px;
     float: none;
     margin-left: auto;
     margin-right: auto;
-    height: 80px;
+    height: 70px;
   }
+}
+
+.dls-container{
+  max-width: $large-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrap .footer-widgets-1{
   width: 100%;
-  background-color: orange;
+  background-color: $light-gray;
   section{
-    border: solid thin green;
-    // background-color: yellow;
     padding: 10px;
+    padding-right: 0;
     width: 50%;
     display: inline-block;
   }
@@ -44,12 +49,40 @@
   #text-3{}
 }
 
-.footer-widgets-2{}
 
-.footer-widgets-3{}
 
 .menu-footer-menu-top-left-container{
   // background-color: blue;
+  margin-top: 7px;
+}
+ul#menu-footer-menu-top-left{
+  li{
+    padding: 5px 10px;
+    // border: solid thin grey;
+  }
+  a{
+    color: white;
+  }
+}
+
+#genesis-footer-widgets{
+  .dls-widget-outer-wrapper{
+    background-color: $dark-gray;
+  }
+  .dls-widget-inner-wrapper{
+    height: 230px;
+  }
+  .footer-widgets-2{
+    width: 60%;
+    h3{
+      color: white;
+    }
+  }
+  .footer-widgets-3{
+    width: 40%;
+    // border: solid thin red;
+    // background-color: #bbb;
+  }
 }
 
 #genesis-footer-widgets .social-list{
@@ -71,23 +104,15 @@
   }
 }
 
-.footer-widgets-2{
-  border: solid thin #ddd;
-  background-color: #eee;
-  width: 60%;
-}
-.footer-list-wrapper{
-  // width: 33.33%;
-  // background-color: green;
-  // float: left;
-}
-
 .footer-links.network,
 .footer-links.channels{
   float: left;
 }
 .footer-links{
   margin-bottom: 15px;
+  a{
+    color: white;
+  }
 }
 .footer-links.network{
   width: 33.33%;
@@ -108,28 +133,14 @@
   padding: 15px;
 }
 
-.footer-widgets-3{
-  width: 40%;
-  border: solid thin red;
-  background-color: #bbb;
-}
 .footer-logo{
-  // position: relative;
   text-align: right;
   a{
-    border: solid thin green;
     display: block;
     margin-top: 30px;
-    // position: relative;
   }
-  img{
-    // position: absolute;
-    // right: 0;
+  p{
+    color: white;
   }
-} 
-
-
-
-.footer-logo{
-
+  img{}
 }
