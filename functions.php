@@ -147,6 +147,12 @@ genesis_register_widget_area( array(
 ) );
 
 genesis_register_widget_area( array(
+	'id'          => 'onair-menu',
+	'name'        => __( 'On-Air Menu', 'DLS Theme' ),
+	'description' => __( 'This is the on-air	 menu', 'DLS Theme' ),
+) );
+
+genesis_register_widget_area( array(
 	'id'          => 'print-sidebar',
 	'name'        => __( 'Print Sidebar', 'DLS Theme' ),
 	'description' => __( 'This is the print sidebar', 'DLS Theme' ),
@@ -156,6 +162,12 @@ genesis_register_widget_area( array(
 	'id'          => 'elements-sidebar',
 	'name'        => __( 'Elements Side Bar', 'DLS Theme' ),
 	'description' => __( 'This widget area appears next to the content in the Elements Page Template', 'DLS Theme' ),
+) );
+
+genesis_register_widget_area( array(
+	'id'          => 'onair-sidebar',
+	'name'        => __( 'On-Air Side Bar', 'DLS Theme' ),
+	'description' => __( 'This widget area appears next to the content in the On-Air Page Template', 'DLS Theme' ),
 ) );
 
 

@@ -1,27 +1,41 @@
-.print-menu {
-  border: solid thin green;
-  background-color: yellow;
-  text-align: right; }
-  .print-menu li {
-    display: inline-block; }
-    .print-menu li a {
-      padding: 10px 15px;
-      border: solid thin orange;
-      display: inline-block; }
-  .print-menu .widget ul > li {
-    padding-bottom: 0;
-    margin-bottom: 0; }
-
-.print-sidebar {
-  border: solid thin green;
-  background-color: blue; }
-
 /* 
 * Sass functions to all allow nesting placeholders inside of 
 * media queries
 *
 * src: https://www.sitepoint.com/cross-media-query-extend-sass/
 */
+@font-face {
+  font-family: 'Al-Jazeera-Arabic-Light';
+  src: url("../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Al-Jazeera-Arabic-Regular';
+  src: url("../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Al-Jazeera-Arabic-Bold';
+  src: url("../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Al-Jazeera-Arabic-Heavy';
+  src: url("../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Heavy.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Al-Jazeera-Arabic-Light';
+  src: url("../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Helvetica-Neue-LT-Bold';
+  src: url("../fonts/Helvetica-Neue-LT/Helvetica-Neue-LT-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Helvetica-Neue-LT-Light';
+  src: url("../fonts/Helvetica-Neue-LT/Helvetica-Neue-LT-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Helvetica-Neue-LT-Roman';
+  src: url("../fonts/Helvetica-Neue-LT/Helvetica-Neue-LT-Roman.otf") format("opentype"); }
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -29,7 +43,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   color: #222;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica-Neue-LT-Light", Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -40,7 +54,7 @@ h6, .h6 {
 body, select, input, textarea, p, .p {
   color: #222;
   font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica-Neue-LT-Light", Helvetica, Arial, sans-serif;
   font-weight: 100;
   line-height: 1.5;
   letter-spacing: 0; }
@@ -425,6 +439,17 @@ input:focus[type="submit"],
   max-width: 1280px;
   margin: 0 auto; }
 
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+.genesis-nav-menu a {
+  padding: 17px 20px; }
+
+.genesis-nav-menu .current-menu-item > a, .genesis-nav-menu .current-page-ancestor > a {
+  background-color: pink; }
+
+.nav-primary {
+  border-top: none; }
+
 .site-header {
   background-color: #0c1335; }
   .site-header > .wrap {
@@ -478,7 +503,7 @@ input:focus[type="submit"],
 
 .wrap .footer-widgets-1 {
   width: 100%;
-  background-color: #d1d1cf; }
+  background-color: #54565b; }
   .wrap .footer-widgets-1 section {
     padding: 10px;
     padding-right: 0;
@@ -502,7 +527,7 @@ ul#menu-footer-menu-top-left a {
   color: white; }
 
 #genesis-footer-widgets .dls-widget-outer-wrapper {
-  background-color: #54565b; }
+  background-color: #000; }
 
 #genesis-footer-widgets .dls-widget-inner-wrapper {
   height: 230px; }
@@ -562,3 +587,39 @@ ul#menu-footer-menu-top-left a {
     margin-top: 30px; }
   .footer-logo p {
     color: white; }
+
+.print-menu, .onair-menu {
+  text-align: right;
+  margin-top: -50px; }
+  .print-menu li, .onair-menu li {
+    display: inline-block; }
+    .print-menu li a, .onair-menu li a {
+      padding: 10px 15px;
+      display: inline-block; }
+  .print-menu .widget ul > li, .onair-menu .widget ul > li {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+.print-menu, .onair-menu {
+  text-align: right;
+  margin-top: -50px; }
+  .print-menu li, .onair-menu li {
+    display: inline-block; }
+    .print-menu li a, .onair-menu li a {
+      padding: 10px 15px;
+      display: inline-block; }
+  .print-menu .widget ul > li, .onair-menu .widget ul > li {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+.onair-menu .current-menu-item > a {
+  background-color: yellow; }
+
+.print-sidebar {
+  border: solid thin green;
+  background-color: blue; }
+
+.post-list-item {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 20px; }

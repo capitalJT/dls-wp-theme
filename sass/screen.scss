@@ -1,9 +1,6 @@
-
 // @import "compass/reset";
-@import "print/print-menu";
-@import "print/print-sidebar";
-// @import "fontastic";
 
+// @import "fontastic";
 
 // @charset "UTF-8";
 // @import "compass/css3";
@@ -17,7 +14,7 @@
 
 // @import "helpers/helpers";
 // @import "helpers/bg-img-variables";
-// @import "helpers/mixins";
+@import "helpers/mixins";
 // @import "helpers/text-utils";
 // @import "helpers/logged-in";
 // @import "helpers/select-input-section";
@@ -30,7 +27,7 @@
 @import "components/dls-widget-wrapper";
 // @import "components/adaptive-svg-buttons";
 // @import "components/megamenu";
-// @import "components/utility-nav";
+@import "components/nav";
 // @import "components/panels";
 // @import "components/menus";
 // @import "components/video-container";
@@ -63,29 +60,16 @@
 // @import "templates/customer-stories-page-template";
 // @import "templates/webinars-template";
 
-// @import "pages/homepage";
-// @import "pages/inthenews";
-// @import "pages/in-person-events-page";
-// @import "pages/webinars-page";
-// @import "pages/newsroom-page";
-// @import "pages/careers-page";
-// @import "pages/newsroom-awards-page";
-// @import "pages/customer-stories-page";
-// @import "pages/customer-reviews-page";
-// @import "pages/partners-master-page";
-// @import "pages/our-team-page";
-// @import "pages/learn-page";
-// @import "pages/thank-you-page";
-// @import "pages/products-master-page";
-// @import "pages/support-page";
-// @import "pages/solutions-page";
-// @import "pages/investors-page";
-// @import "pages/analyst_reports";
-// @import "pages/press";
+@import "pages/home";
+// @import "pages/about";
+// @import "pages/contact";
+// @import "pages/blog";
+@import "pages/print-menu";
+@import "pages/onair-menu";
+@import "pages/print-sidebar";
 
-// @import "third-party/owl-carousel";
-// @import "third-party/fancybox";
-// @import "third-party/bx-slider";
+// @import "vendor/owl-carousel";
+// @import "vendor/bx-slider";
 
 // @import "themes/dev-layer";
 
@@ -96,3 +80,9 @@
 // .menu-elements-side-bar-menu-container{
 //   background-color: #eee;
 // }
+
+.post-list-item{
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 20px;
+}
