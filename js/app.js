@@ -49,6 +49,20 @@
 		var widgies = $(".footer-widgets-2, .footer-widgets-3 ").detach();
 
 		$('.dls-widget-inner-wrapper').append(widgies);
-	});
 
+		
+		// Smooth scroll sidebar
+		var nav = $('.onair-sidebar');
+		nav.find('a').on('click', function () {
+		  var $el = $(this), 
+		       id = $el.attr('href');
+		  
+		  $('html, body').animate({
+		    scrollTop: $(id).offset().top + 1
+		  }, 500);
+		  
+		  return false;
+		});
+
+	});
 })( document, jQuery );

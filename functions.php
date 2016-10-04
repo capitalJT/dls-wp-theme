@@ -171,15 +171,11 @@ genesis_register_widget_area( array(
 ) );
 
 
-
-
-
-
-
-
-
-
-
+// add_filter( 'the_content', 'disable_wpautop_cpt', 0 );
+// function disable_wpautop_cpt( $content ) {
+//   'onair_structures' === get_post_type() && remove_filter( 'the_content', 'wpautop' );
+//   return $content;
+// }
 
 
 //* Do NOT include the opening php tag
