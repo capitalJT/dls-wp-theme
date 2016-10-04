@@ -1,0 +1,42 @@
+.sidebar{
+  margin-bottom: 0;
+  a{
+    display: block;
+    padding-top:5px;
+    padding-bottom:5px;
+    &.active-nav{
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+  .widget ul > li{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.sticky-sidebar{}
+
+@media only screen and (min-width: 1024px){
+  .sticky-sidebar{
+    position: fixed;
+    top:0;
+  }
+}
+
+@media only screen and (max-width: 1340px){
+  .sticky-sidebar{
+    margin-left: 840px;
+  }
+}
+@media only screen and (min-width: 1340px){
+  .sticky-sidebar{
+    margin-left: 920px;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .sticky-sidebar{
+    margin-left: 660px;
+  }
+}

@@ -49,8 +49,6 @@
   #text-3{}
 }
 
-
-
 .menu-footer-menu-top-left-container{
   // background-color: blue;
   margin-top: 7px;
@@ -80,6 +78,11 @@ ul#menu-footer-menu-top-left{
   }
   .footer-widgets-3{
     width: 40%;
+    img{
+      width: 100%;
+      height: auto;
+      max-width: 230px;
+    }
     // border: solid thin red;
     // background-color: #bbb;
   }
@@ -87,6 +90,7 @@ ul#menu-footer-menu-top-left{
 
 #genesis-footer-widgets .social-list{
   text-align: right;
+
   li{
     display: inline-block;
     padding-bottom: 0;
@@ -97,10 +101,19 @@ ul#menu-footer-menu-top-left{
     display: inline-block;
     width: 50px;
     height: 50px;
+    border-radius: 100%;
     line-height: 50px;
     text-align: center;
-    background-color: #eee;
-    border: solid thin #ddd;
+    color: $light-gray;
+    transition: background-color ease $global-ease-speed;
+    &:hover{
+      color: $secondary-color;
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+  [class^="ajmn-"]:before,
+  [class*=" ajmn-"]:before {
+    line-height: 50px;
   }
 }
 
@@ -143,4 +156,10 @@ ul#menu-footer-menu-top-left{
     color: white;
   }
   img{}
+}
+
+.site-footer{
+  padding-top:15px;
+  padding-bottom:15px;
+  display: none;
 }

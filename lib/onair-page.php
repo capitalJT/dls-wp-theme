@@ -20,7 +20,7 @@ function onair_loop(){
 
 		echo '<section id="';
 		echo the_field('id').'" class="post-list-item" data-sidebar-text="';
-		echo the_field('sidebar-text') .'">'; /* opening list item tag */
+		echo the_field('sidebar_text') .'">'; /* opening list item tag */
 		echo '<h3 class="title">';
 		echo the_title() .'</h3>';
 		echo '<span class="description">';

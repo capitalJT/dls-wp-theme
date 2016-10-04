@@ -31,6 +31,7 @@ function elements_loop(){
 		endwhile;
 	}
 
+
 	$structure_args = array(
 		'post_type'  => 'onair_structures',
 		'posts_per_page' => '12',

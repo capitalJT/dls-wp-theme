@@ -16,6 +16,8 @@
 
 .onair-menu{
   .current-menu-item > a{
-    background-color: yellow;
+    // background-color: yellow;
+    color: $secondary-color;
+    text-decoration: underline;
   }
 }

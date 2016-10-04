@@ -1,7 +1,7 @@
 <?php 
 
 /**
-* Template Name: On-Air
+* Template Name: Template Example
 */
 
 add_action('genesis_loop', 'onair_loop');
