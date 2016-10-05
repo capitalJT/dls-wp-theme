@@ -8,6 +8,7 @@ var concat      = require('gulp-concat');
 var rename      = require('gulp-rename');  
 var uglify      = require('gulp-uglify');
 var jshint      = require("gulp-jshint");
+var sourcemaps  = require('gulp-sourcemaps');
 
 /**
  * @task sass
@@ -15,8 +16,10 @@ var jshint      = require("gulp-jshint");
  */
 gulp.task('sass', function () {
   return gulp.src('sass/screen.scss') // the source .scss file
-  .pipe(sass()) // pass the file through gulp-sass
+  .pipe(sourcemaps.init())
+  .pipe(sass().on('error', sass.logError)) // pass the file through gulp-sass
   .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // pass the file through autoprefixer
+  .pipe(sourcemaps.write()) // writing sourcemaps to relative path for debugging
   .pipe(gulp.dest('stylesheets')) // output .css file to css folder
   .pipe(browserSync.reload({stream:true})) // reload the stream
 });

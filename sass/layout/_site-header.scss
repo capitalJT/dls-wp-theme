@@ -1,16 +1,17 @@
 .site-header{
   background-color: $primary-color;
   & > .wrap {
-    padding: 10px 0;
+    padding: 10px;
   }
   @include tablet{
     // border: solid thick red;
   }
 }
 
-.site-header .logo-wrapper{
+.logo-wrapper{
   height: 50px;
   // background-color: pink;
+  // border: solid thin blue;
   .site-logo{
     float: left;
     margin-right: 10px;
@@ -21,15 +22,20 @@
     color: white;
     @extend %h2-rwd;
   }
+  @include tablet-max{
+    margin-bottom: 10px;
+  }
+  @include tablet {
+
+  }
 }
 
-.site-header .site-search{
-  // background-color: orange;
+.site-search{
+  // background-color: yellow;
+  // border: solid thin red;
   .search-form{
-    // border: solid thin grey;
     float: none;
     width: 400px;
-    float: right;
     margin: 0;
     input{
       float: left;
@@ -39,11 +45,15 @@
     }
     input[type="submit"]{
       margin-top: 0;
+      width: 90px;
     }
   }
-  @include tablet {
+  @include desktop {
     width: 50%;
     float: right;
     margin-top: -50px;
+    .search-form{
+      float: right;
+    }
   }
 }

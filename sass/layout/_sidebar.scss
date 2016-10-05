@@ -1,5 +1,4 @@
 .sidebar{
-  margin-bottom: 0;
   a{
     display: block;
     padding-top:5px;
@@ -11,6 +10,9 @@
   }
   .widget ul > li{
     padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  @include desktop{
     margin-bottom: 0;
   }
 }
