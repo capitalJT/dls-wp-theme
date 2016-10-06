@@ -35,7 +35,7 @@ function components_loop(){
 add_action( 'genesis_after_header', 'dls_print_menu' );
 function dls_print_menu() {
     genesis_widget_area( 'print-menu', array(
-		'before' => '<div class="print-menu widget-area"><div class="wrap">',
+		'before' => '<div class="print-menu second-level-menu widget-area"><div class="wrap">',
 		'after'  => '</div></div>', 
 	) );
 }

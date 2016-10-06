@@ -27,6 +27,7 @@ function onair_loop(){
 		echo the_field('description') .'</span>';
 		echo '<span class="snippet">';
 		echo the_field('snippet') .'</span>';
+		echo edit_post_link( $link, $class );
 		echo '</section>'; /* closing list item tag*/
 
 		endwhile;
@@ -39,7 +40,7 @@ remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 add_action( 'genesis_after_header', 'dls_onair_menu' );
 function dls_onair_menu() {
     genesis_widget_area( 'onair-menu', array(
-		'before' => '<div class="onair-menu widget-area"><div class="wrap">',
+		'before' => '<div class="onair-menu second-level-menu widget-area"><div class="wrap">',
 		'after'  => '</div></div>', 
 	) );
 }

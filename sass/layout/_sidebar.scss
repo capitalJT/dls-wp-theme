@@ -6,11 +6,18 @@
     &.active-nav{
       font-weight: bold;
       text-decoration: underline;
+      color: $black;
     }
   }
   .widget ul > li{
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+  @include medium-max{
+    .wrap{
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   @include desktop{
     margin-bottom: 0;

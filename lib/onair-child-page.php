@@ -26,6 +26,7 @@ function elements_loop(){
 		echo the_field('description') .'</span>';
 		echo '<span class="body-content">';
 		echo the_field('body_content') .'</span>';
+		echo edit_post_link( $link, $class );
 		echo '</section>'; /* closing list item tag*/
 
 		endwhile;
@@ -42,7 +43,43 @@ function elements_loop(){
 		while($onairstructures -> have_posts()): $onairstructures ->the_post();
 
 		echo '<section id="';
-		echo the_field('id').'" class="post-list-item" data-sidebar-text="';
+		echo the_field('id').'" class="post-list-item ';
+		echo the_field('class_list'). '" data-sidebar-text="';
+		echo the_field('sidebar_text') .'">'; /* opening list item tag */
+		echo '<h3 class="title">';
+		echo the_title() .'</h3>';
+		echo '<span class="description">';
+		echo the_field('description') .'</span>';
+		
+		echo '<span class="body-content">';
+		echo the_field('body_content') .'</span>';
+
+		$file = get_field('download_link');
+		// echo '<span class="downloadlink">';
+		// echo $file[url] .'</span>';
+
+		echo '<span class="downloadlink"><a href="';
+		echo $file .'" target="_blank"><button type="submit">Download!</button></a></span>';
+
+		echo edit_post_link( $link, $class );
+		// echo edit_post_link('Edit this', '<p>', '</p>');
+		echo '</section>'; /* closing list item tag*/
+
+		endwhile;
+	}
+
+	$demos_args = array(
+		'post_type'  => 'onair_demos',
+		'posts_per_page' => '12',
+	);
+
+	$onairdemos = new WP_Query($demos_args);
+	if(($onairdemos -> have_posts()) && (is_page( 65 ))) {
+		while($onairdemos -> have_posts()): $onairdemos ->the_post();
+
+		echo '<section id="';
+		echo the_field('id').'" class="post-list-item ';
+		echo the_field('class_list'). '" data-sidebar-text="';
 		echo the_field('sidebar_text') .'">'; /* opening list item tag */
 		echo '<h3 class="title">';
 		echo the_title() .'</h3>';
@@ -74,7 +111,7 @@ remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 add_action( 'genesis_after_header', 'dls_onair_menu' );
 function dls_onair_menu() {
     genesis_widget_area( 'onair-menu', array(
-		'before' => '<div class="onair-menu widget-area"><div class="wrap">',
+		'before' => '<div class="onair-menu second-level-menu widget-area"><div class="wrap">',
 		'after'  => '</div></div>', 
 	) );
 }
