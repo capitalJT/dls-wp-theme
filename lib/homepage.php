@@ -19,23 +19,32 @@ function homepage_loop(){
 		
 
 		<section class="homepage-section section-one" style="background-image: url('<?php echo get_field('section_one_bgimg'); ?>');">
-			<a href="dls/<?php echo the_field('section_one_anchor');?>">
-				<span class="section-title"><?php echo the_field('section_one_title');?></span>
-				<span class="section-blurb"><?php echo the_field('section_one_blurb');?></span>
+			<a class="" href="dls/<?php echo the_field('section_one_anchor');?>">
+				<div class="homepage-section-text-wrapper">
+					<span class="section-title"><?php echo the_field('section_one_title');?></span>
+					<span class="section-blurb"><?php echo the_field('section_one_blurb');?></span>
+					<span class="section-cta"><?php echo the_field('section_one_cta');?></span>
+				</div>
 			</a>
 		</section>
 
 		<section class="homepage-section section-two" style="background-image: url('<?php echo get_field('section_two_bgimg'); ?>');">
 			<a href="dls/<?php echo the_field('section_two_anchor');?>">
-				<span class="section-title"><?php echo the_field('section_two_title');?></span>
-				<span class="section-blurb"><?php echo the_field('section_two_blurb');?></span>
+				<div class="homepage-section-text-wrapper">
+					<span class="section-title"><?php echo the_field('section_two_title');?></span>
+					<span class="section-blurb"><?php echo the_field('section_two_blurb');?></span>
+					<span class="section-cta"><?php echo the_field('section_two_cta');?></span>
+				</div>	
 			</a>
 		</section>
 
 		<section class="homepage-section section-three" style="background-image: url('<?php echo get_field('section_three_bgimg'); ?>');">
 			<a href="dls/<?php echo the_field('section_three_anchor');?>">
-				<span class="section-title"><?php echo the_field('section_three_title');?></span>
-				<span class="section-blurb"><?php echo the_field('section_three_blurb');?></span>
+				<div class="homepage-section-text-wrapper">
+					<span class="section-title"><?php echo the_field('section_three_title');?></span>
+					<span class="section-blurb"><?php echo the_field('section_three_blurb');?></span>
+					<span class="section-cta"><?php echo the_field('section_three_cta');?></span>
+				</div>	
 			</a>
 		</section>
 
