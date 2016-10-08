@@ -1,5 +1,51 @@
 .home.page{
   .nav-primary{
-    // display: none;
-  }  
+    display: none;
+  }
+  .site-inner{
+    padding-top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .type-page{
+    border: solid thin green;
+    display: none;
+  }
+  main.content{
+    @include medium-screen{
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
+
+.homepage-section{
+  background-size: cover;
+  background-color:white;
+  a{
+    padding: 20px;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .section-title,
+  .section-blurb{
+    display: block;
+  }
+  .section-blurb{
+    padding: 20px;
+    border: solid thick white;
+  }
+  @include medium-screen{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    a{
+      width: 100%;
+      height: 55vh;
+    }
+  }
+}
+.section-one{}
+.section-two{}
+.section-three{}

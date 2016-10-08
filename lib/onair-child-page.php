@@ -8,12 +8,12 @@ add_action('genesis_loop', 'elements_loop');
 
 function elements_loop(){
 
-	$elemnent_args = array(
+	$elements_args = array(
 		'post_type'  => 'onair_elements',
 		'posts_per_page' => '12',
 	);
 
-	$onairelements = new WP_Query($elemnent_args);
+	$onairelements = new WP_Query($elements_args);
 	if(($onairelements -> have_posts()) && (is_page( 60 ))) {
 		while($onairelements -> have_posts()): $onairelements ->the_post();
 
@@ -33,12 +33,12 @@ function elements_loop(){
 	}
 
 
-	$structure_args = array(
+	$structures_args = array(
 		'post_type'  => 'onair_structures',
 		'posts_per_page' => '12',
 	);
 
-	$onairstructures = new WP_Query($structure_args);
+	$onairstructures = new WP_Query($structures_args);
 	if(($onairstructures -> have_posts()) && (is_page( 63 ))) {
 		while($onairstructures -> have_posts()): $onairstructures ->the_post();
 
