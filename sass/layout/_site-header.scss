@@ -20,14 +20,16 @@
   }
   .site-name{
     color: white;
-    @extend %h2-rwd;
+    height: 50px;
+    line-height: 50px;
+    // border: solid thin red;
+    @extend %h3-rwd;
+    font-weight: bold;
   }
   @include tablet-max{
     margin-bottom: 10px;
   }
-  @include tablet {
-
-  }
+  @include tablet {}
 }
 
 .site-search{
@@ -51,7 +53,7 @@
   @include desktop {
     width: 50%;
     float: right;
-    margin-top: -50px;
+    margin-top: -47px;
     .search-form{
       float: right;
     }

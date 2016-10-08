@@ -177,10 +177,18 @@ ul#menu-footer-menu-top-left{
     float: left;
   }
   .channels-list{
-    width: 33.33%;
+    width: 50%;
   }
   .channels-cont-list{
-    width: 66.66%;
+    width: 50%;
+  }
+  @include medium-screen{
+    // .channels-list{
+    //   width: 33.33%;
+    // }
+    // .channels-cont-list{
+    //   width: 66.66%;
+    // }
   }
 }
 .footer-widgets-2 .widget-wrap{
