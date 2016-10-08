@@ -1,7 +1,10 @@
 ( function ( document, $, undefined ) {
 	
+	// # Contents
+	// - Smooth scroll sidebar
+	// - Searchbar toggle 
+
 	$(document).ready(function(){
-		// console.log("This is a test");
 		if ($('.elements-sidebar').length){
 			// $(".textwidget").text("holy shit");
 			$('.textwidget').append('<ul id="contents-list"></ul>');
@@ -51,7 +54,6 @@
 		$('.dls-widget-inner-wrapper').append(widgies);
 
 		
-
 		// calculating some values
 		var header_height = $('.site-header').outerHeight(),
 		  onair_menu = $('.onair-menu').outerHeight(),
@@ -100,7 +102,7 @@
 		  });
 		});
 
-		// Smooth scroll sidebar
+		// - Smooth scroll sidebar
 		nav.find('a').on('click', function () {
 		  var $el = $(this), 
 		       id = $el.attr('href');
@@ -110,6 +112,11 @@
 		  }, 500);
 		  
 		  return false;
+		});
+
+		// - Searchbar toggle
+		$(".searchbar-toggle").click(function(){
+		  $("#searchbar-collapse").slideToggle();
 		});
 
 	});

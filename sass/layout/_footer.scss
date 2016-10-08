@@ -96,6 +96,7 @@ ul#menu-footer-menu-top-left{
   .footer-widgets-3{
     width: 100%;
     float: none;
+    padding: 20px;
     img{
       width: 100%;
       height: auto;
@@ -204,4 +205,16 @@ ul#menu-footer-menu-top-left{
     color: white;
   }
   img{}
+}
+.copyright-notice{
+  // background-color: #eee;
+  color: white;
+  span{
+    display: block;
+  }
+  @include large-screen{
+    span{
+      display: inline-block;
+    }
+  }
 }

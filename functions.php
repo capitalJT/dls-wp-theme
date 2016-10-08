@@ -130,15 +130,24 @@ function jt_header_image() {
 	$name = get_bloginfo('name');
 	$url = get_bloginfo('url');
 	// $description = get_bloginfo('description');
-	echo '<div class="logo-wrapper">';
-  echo '<a href="'. $url .'"><img class="site-logo" src="' . get_stylesheet_directory_uri() . '/images/AJMN-logo.png" alt="AJMN Logo">';
-  echo '<div class="site-name">'. $name .'</div></a>';
-  // echo '<div class="site-description">'. $description .'</div>';
-  echo '</div>';
-  echo '<div class="site-search">'. get_search_form( $echo ) .'</div>';
-  echo '</div>';
-}
+	// echo '<div class="site-description">'. $description .'</div>';
+	?>
+	
+	<div class="logo-wrapper">
+		<a href="<?php echo $url; ?>">
+			<img class="site-logo" src="<?php echo get_stylesheet_directory_uri();?>/images/AJMN-logo.png" alt="AJMN Logo">
+			<div class="site-name"><?php echo $name; ?></div>
+		</a>
+	</div>
 
+	<button type="button" data-toggle="collapse" data-target="#searchbar-collapse" class="searchbar-toggle">
+	  <div class="ajmn-search"></div>
+	</button>
+
+	<div id="searchbar-collapse" class="site-search search-collapse"><?php echo get_search_form( $echo ); ?></div>
+
+	<?php
+}
 
 genesis_register_widget_area( array(
 	'id'          => 'print-menu',

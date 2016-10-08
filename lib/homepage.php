@@ -17,7 +17,6 @@ function homepage_loop(){
 		while($homepagesections -> have_posts()): $homepagesections ->the_post();
 		?>
 		
-
 		<section class="homepage-section section-one" style="background-image: url('<?php echo get_field('section_one_bgimg'); ?>');">
 			<a class="" href="dls/<?php echo the_field('section_one_anchor');?>">
 				<div class="homepage-section-text-wrapper">

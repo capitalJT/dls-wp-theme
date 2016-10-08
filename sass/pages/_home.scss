@@ -30,7 +30,7 @@
     box-sizing: border-box;
     color: white;
     background-color: rgba(0,0,0,0.5);
-    transition: background-color 300ms ease-in-out;
+    transition: background-color $global-ease-speed ease-in-out;
     &:hover{
       background-color: rgba(0,0,0,0.6);
       // -webkit-filter: blur(10px);
@@ -58,7 +58,7 @@
   .section-cta{
     display: block;
     opacity: 0;
-    transition: padding-top 300ms ease-in-out;
+    transition: padding-top $global-ease-speed ease-in-out;
     padding-top: 10px;
     text-transform: lowercase;
     &:after{
