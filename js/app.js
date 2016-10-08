@@ -53,7 +53,6 @@
 
 		$('.dls-widget-inner-wrapper').append(widgies);
 
-		
 		// calculating some values
 		var header_height = $('.site-header').outerHeight(),
 		  onair_menu = $('.onair-menu').outerHeight(),
