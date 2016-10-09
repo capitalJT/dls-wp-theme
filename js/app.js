@@ -89,12 +89,12 @@
 
 		// calculating some values
 		var header_height = $('.site-header').outerHeight(),
-		  onair_menu = $('.onair-menu').outerHeight(),
+		  dls_menu = $('.dls-menu').outerHeight(),
 		  scroll_top_icon = $('#scroll-to-top'),
-		  nav = $('.onair-sidebar');
+		  nav = $('.dls-sidebar');
 		  sections = $('.post-list-item'),
 		  sipt = parseInt($('.site-inner').css('padding-top'), 10), 
-		  combined_height = header_height + onair_menu;
+		  combined_height = header_height + dls_menu;
 
 		// Scroll to top function 1/2
 		$(window).scroll(function(){

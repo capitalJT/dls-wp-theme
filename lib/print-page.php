@@ -175,7 +175,7 @@ remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 add_action( 'genesis_after_header', 'dls_print_menu' );
 function dls_print_menu() {
     genesis_widget_area( 'print-menu', array(
-		'before' => '<div class="print-menu second-level-menu widget-area"><div class="wrap">',
+		'before' => '<div class="dls-menu print-menu second-level-menu widget-area"><div class="wrap">',
 		'after'  => '</div></div>', 
 	) );
 }
@@ -184,7 +184,7 @@ function dls_print_menu() {
 add_action( 'genesis_after_content', 'dls_print_sidebar' );
 function dls_print_sidebar() {
     genesis_widget_area( 'print-sidebar', array(
-		'before' => '<aside class="print-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
+		'before' => '<aside class="dls-sidebar print-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
 		'after'  => '</div></aside>', 
 	) );
 }
