@@ -149,36 +149,44 @@ function jt_header_image() {
 	<?php
 }
 
+// digital-menu widget
+genesis_register_widget_area( array(
+	'id'          => 'digital-menu',
+	'name'        => __( 'Digital Menu', 'DLS Theme' ),
+	'description' => __( 'This is the Digital	menu', 'DLS Theme' ),
+) );
+// digital-sidebar widget
+genesis_register_widget_area( array(
+	'id'          => 'digital-sidebar',
+	'name'        => __( 'Digital Side Bar', 'DLS Theme' ),
+	'description' => __( 'This widget area appears next to the content in the Digital Page Template', 'DLS Theme' ),
+) );
+
+// print-menu widget
 genesis_register_widget_area( array(
 	'id'          => 'print-menu',
 	'name'        => __( 'Print Menu', 'DLS Theme' ),
 	'description' => __( 'This is the print menu', 'DLS Theme' ),
 ) );
-
-genesis_register_widget_area( array(
-	'id'          => 'onair-menu',
-	'name'        => __( 'On-Air Menu', 'DLS Theme' ),
-	'description' => __( 'This is the on-air	 menu', 'DLS Theme' ),
-) );
-
+// print-sidebar widget
 genesis_register_widget_area( array(
 	'id'          => 'print-sidebar',
 	'name'        => __( 'Print Sidebar', 'DLS Theme' ),
 	'description' => __( 'This is the print sidebar', 'DLS Theme' ),
 ) );
 
+// onair-menu widget
 genesis_register_widget_area( array(
-	'id'          => 'elements-sidebar',
-	'name'        => __( 'Elements Side Bar', 'DLS Theme' ),
-	'description' => __( 'This widget area appears next to the content in the Elements Page Template', 'DLS Theme' ),
+	'id'          => 'onair-menu',
+	'name'        => __( 'On-Air Menu', 'DLS Theme' ),
+	'description' => __( 'This is the on-air menu', 'DLS Theme' ),
 ) );
-
+// onair-sidebar widget
 genesis_register_widget_area( array(
 	'id'          => 'onair-sidebar',
 	'name'        => __( 'On-Air Side Bar', 'DLS Theme' ),
 	'description' => __( 'This widget area appears next to the content in the On-Air Page Template', 'DLS Theme' ),
 ) );
-
 
 // add_filter( 'the_content', 'disable_wpautop_cpt', 0 );
 // function disable_wpautop_cpt( $content ) {
@@ -187,7 +195,6 @@ genesis_register_widget_area( array(
 // }
 
 
-//* Do NOT include the opening php tag
 //* Remove the site footer
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 remove_action( 'genesis_footer', 'genesis_do_footer' );

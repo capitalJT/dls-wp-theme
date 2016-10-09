@@ -1,23 +1,23 @@
 <?php 
 
 /**
-* Template Name: Print Template
+* Template Name: Digital Template
 */
 
-add_action('genesis_loop', 'print_loop');
+add_action('genesis_loop', 'digital_loop');
 
-function print_loop(){
+function digital_loop(){
 
 
-	/* START - Print Page Sections */
-	$print_args = array(
-		'post_type'  => 'print_page_sections',
+	/* START - Digital Page Sections */
+	$digital_args = array(
+		'post_type'  => 'digital_pg_sections',
 		'posts_per_page' => '12',
 	);
 
-	$printsections = new WP_Query($print_args);
-	if(($printsections -> have_posts()) && (is_page( 18 ))) {
-		while($printsections -> have_posts()): $printsections ->the_post();
+	$digitalsections = new WP_Query($digital_args);
+	if(($digitalsections -> have_posts()) && (is_page( 29 ))) {
+		while($digitalsections -> have_posts()): $digitalsections ->the_post();
 		$file = get_field('download_link');
 		?>
 
@@ -36,17 +36,17 @@ function print_loop(){
 		<?php
 		endwhile;
 	}
-	/* END - Print Page Sections */
+	/* END - Digital Page Sections */
 
-	/* START - Print Elements */
+	/* START - Digital Elements */
 	$elements_args = array(
-		'post_type'  => 'print_elements',
+		'post_type'  => 'digital_elements',
 		'posts_per_page' => '12',
 	);
 
-	$printelements = new WP_Query($elements_args);
-	if(($printelements -> have_posts()) && (is_page( 8 ))) {
-		while($printelements -> have_posts()): $printelements ->the_post();
+	$digitalelements = new WP_Query($elements_args);
+	if(($digitalelements -> have_posts()) && (is_page( 102 ))) {
+		while($digitalelements -> have_posts()): $digitalelements ->the_post();
 		$file = get_field('download_link');
 		?>
 
@@ -65,17 +65,17 @@ function print_loop(){
 		<?php
 		endwhile;
 	}
-	/* END - Print Elements */
+	/* END - Digital Elements */
 
-	/* START - Print Layouts */
-	$layouts_args = array(
-		'post_type'  => 'print_layouts',
+	/* START - Digital Components */
+	$components_args = array(
+		'post_type'  => 'digital_components',
 		'posts_per_page' => '12',
 	);
 
-	$printlayouts = new WP_Query($layouts_args);
-	if(($printlayouts -> have_posts()) && (is_page( 13 ))) {
-		while($printlayouts -> have_posts()): $printlayouts ->the_post();
+	$digitalcomponents = new WP_Query($components_args);
+	if(($digitalcomponents -> have_posts()) && (is_page( 104 ))) {
+		while($digitalcomponents -> have_posts()): $digitalcomponents ->the_post();
 
 		$file = get_field('download_link');
 
@@ -97,17 +97,17 @@ function print_loop(){
 
 		endwhile;
 	}
-	/* END - Print Layouts */
+	/* END - Digital Components */
 
-	/* START - Print Co-Branding */
-	$cobranding_args = array(
-		'post_type'  => 'print_cobrands',
+	/* START - Digital Templates */
+	$templates_args = array(
+		'post_type'  => 'digital_templates',
 		'posts_per_page' => '12',
 	);
 
-	$printcobrands = new WP_Query($cobranding_args);
-	if(($printcobrands -> have_posts()) && (is_page( 11 ))) {
-		while($printcobrands -> have_posts()): $printcobrands ->the_post();
+	$digitaltemplates = new WP_Query($templates_args);
+	if(($digitaltemplates -> have_posts()) && (is_page( 107 ))) {
+		while($digitaltemplates -> have_posts()): $digitaltemplates ->the_post();
 
 		$file = get_field('download_link');
 
@@ -131,17 +131,17 @@ function print_loop(){
 		// echo edit_post_link('Edit this', '<p>', '</p>');
 		endwhile;
 	}
-	/* END - Print Co-Branding */
+	/* END - Digital Templates */
 
-	/* START - Print Applications */
-	$applications_args = array(
-		'post_type'  => 'print_applications',
+		/* START - Digital Resources */
+	$resources_args = array(
+		'post_type'  => 'digital_resources',
 		'posts_per_page' => '12',
 	);
 
-	$printapplications = new WP_Query($applications_args);
-	if(($printapplications -> have_posts()) && (is_page( 120 ))) {
-		while($printapplications -> have_posts()): $printapplications ->the_post();
+	$digitalresources = new WP_Query($resources_args);
+	if(($digitalresources -> have_posts()) && (is_page( 109 ))) {
+		while($digitalresources -> have_posts()): $digitalresources ->the_post();
 
 		$file = get_field('download_link');
 
@@ -165,26 +165,26 @@ function print_loop(){
 		// echo edit_post_link('Edit this', '<p>', '</p>');
 		endwhile;
 	}
-	/* END - Print Applications */
+	/* END - Digital Resources */
 }
 
 // remove Primary Sidebar from the Primary Sidebar area
 remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 
-// Print custom menu
-add_action( 'genesis_after_header', 'dls_print_menu' );
-function dls_print_menu() {
-    genesis_widget_area( 'print-menu', array(
-		'before' => '<div class="print-menu second-level-menu widget-area"><div class="wrap">',
+// Digital custom menu
+add_action( 'genesis_after_header', 'dls_digital_menu' );
+function dls_digital_menu() {
+    genesis_widget_area( 'digital-menu', array(
+		'before' => '<div class="digital-menu second-level-menu widget-area"><div class="wrap">',
 		'after'  => '</div></div>', 
 	) );
 }
 
-// Print custom sidebar
-add_action( 'genesis_after_content', 'dls_print_sidebar' );
-function dls_print_sidebar() {
-    genesis_widget_area( 'print-sidebar', array(
-		'before' => '<aside class="print-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
+// Digital custom sidebar
+add_action( 'genesis_after_content', 'dls_digital_sidebar' );
+function dls_digital_sidebar() {
+    genesis_widget_area( 'digital-sidebar', array(
+		'before' => '<aside class="digital-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
 		'after'  => '</div></aside>', 
 	) );
 }
