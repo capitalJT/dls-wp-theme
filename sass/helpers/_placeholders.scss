@@ -5,3 +5,9 @@
   background-attachment: fixed;
   // background-image: $url_14;
 }
+
+%current-menu-item{
+  color: $secondary-color;
+  text-decoration: underline;
+  font-weight: $global-weight-heavy;
+}
