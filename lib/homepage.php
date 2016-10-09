@@ -13,7 +13,7 @@ function homepage_loop(){
 	);
 
 	$homepagesections = new WP_Query($homepage_args);
-	if(($homepagesections -> have_posts()) && (is_page( 6 ))) {
+	if(($homepagesections -> have_posts()) && (is_page( 'home' ))) {
 		while($homepagesections -> have_posts()): $homepagesections ->the_post();
 		?>
 		

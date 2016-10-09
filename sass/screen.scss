@@ -1,9 +1,6 @@
-// @import "compass/reset";
-
 // @import "fontastic";
 
 // @charset "UTF-8";
-// @import "compass/css3";
 
 @import "settings/settings";
 
@@ -15,7 +12,8 @@
 // @import "helpers/helpers";
 // @import "helpers/bg-img-variables";
 @import "helpers/mixins";
-// @import "helpers/text-utils";
+@import "helpers/placeholders";
+@import "helpers/text-utils";
 // @import "helpers/logged-in";
 // @import "helpers/select-input-section";
 
@@ -48,39 +46,18 @@
 // @import "layout/grid";
 @import "layout/site-header";
 @import "layout/sidebar";
-// @import "layout/section-main-content";
 @import "layout/footer";
-// @import "layout/sidebar-right";
 
-// @import "templates/gated-form-page-template";
-// @import "templates/form-page-template";
-// @import "templates/overview-template";
-// @import "templates/events-page-template";
-// @import "templates/press-page-template";
-// @import "templates/demo-page-template";
-// @import "templates/customer-stories-page-template";
-// @import "templates/webinars-template";
+// @import "templates/landing-page-template";
 
 @import "pages/home";
-// @import "pages/about";
-// @import "pages/contact";
-// @import "pages/blog";
-@import "pages/print-menu";
-@import "pages/onair-menu";
-@import "pages/print-sidebar";
+// @import "pages/digital-page";
+// @import "pages/print-page";
+// @import "pages/onair-page";
 
 // @import "vendor/owl-carousel";
-// @import "vendor/bx-slider";
-
-// @import "themes/dev-layer";
-
-// @import "exceptions/exceptions";
 
 // @import "ie";
-
-// .menu-elements-side-bar-menu-container{
-//   background-color: #eee;
-// }
 
 .post-list-item{
   background-color: #fff;

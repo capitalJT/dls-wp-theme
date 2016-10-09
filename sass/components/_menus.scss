@@ -1,0 +1,26 @@
+%page-menu{
+  text-align: right;
+  margin-top: -50px;
+  li{
+    display: inline-block;
+    a{
+      padding: 10px 15px;
+      display: inline-block;
+    }
+  }
+  .widget ul > li{
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .current-menu-item > a{
+    // background-color: yellow;
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}
+
+.digital-menu, 
+.print-menu, 
+.onair-menu{
+  @extend %page-menu;
+}
