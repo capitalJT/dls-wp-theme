@@ -16,7 +16,7 @@ function digital_loop(){
 	);
 
 	$digitalsections = new WP_Query($digital_args);
-	if(($digitalsections -> have_posts()) && (is_page( 29 ))) {
+	if(($digitalsections -> have_posts()) && (is_page( 'digital' ))) {
 		while($digitalsections -> have_posts()): $digitalsections ->the_post();
 		$file = get_field('download_link');
 		?>

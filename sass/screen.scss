@@ -12,7 +12,8 @@
 // @import "helpers/helpers";
 // @import "helpers/bg-img-variables";
 @import "helpers/mixins";
-// @import "helpers/text-utils";
+@import "helpers/placeholders";
+@import "helpers/text-utils";
 // @import "helpers/logged-in";
 // @import "helpers/select-input-section";
 
@@ -45,7 +46,6 @@
 // @import "layout/grid";
 @import "layout/site-header";
 @import "layout/sidebar";
-// @import "layout/section-main-content";
 @import "layout/footer";
 
 // @import "templates/landing-page-template";

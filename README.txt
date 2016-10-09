@@ -1,5 +1,4 @@
-# Genesis Sample Theme
-
+# The DLS Theme is a customized version of the Genesis Sample Theme
 Github project link: https://github.com/copyblogger/genesis-sample
 
 
@@ -12,5 +11,4 @@ Github project link: https://github.com/copyblogger/genesis-sample
 
 
 ## Theme Support
-
-Please visit http://my.studiopress.com/help/ for theme support.
+Please visit http://jabaltorres.com for theme support.

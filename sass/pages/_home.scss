@@ -7,8 +7,8 @@
     width: 100%;
     max-width: 100%;
   }
+  // This hides a page
   .type-page{
-    border: solid thin green;
     display: none;
   }
   main.content{
@@ -20,7 +20,7 @@
 }
 
 .homepage-section{
-  background-size: cover;
+  @extend %bg-img;
   background-color:white;
   position: relative;
   a{
