@@ -28,6 +28,7 @@ input:focus[type="submit"],
 .button:focus  {
   background-color: $medium-gray;
   color: #fff;
+  transition: background-color $global-ease-speed $global-ease;
 }
 
 // .entry-content .button:hover,

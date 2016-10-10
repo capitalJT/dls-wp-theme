@@ -25,6 +25,7 @@
     // border: solid thin red;
     @extend %h3-rwd;
     font-weight: bold;
+    padding-top: 4px;
   }
   @include desktop-max{
     margin-bottom: 10px;

@@ -1,21 +1,14 @@
-// @import "fontastic";
-
 // @charset "UTF-8";
-
 @import "settings/settings";
 
 @import "base/colors";
 @import "base/media-queries";
-@import "base/basic-elems";
 @import "base/typography";
 
-// @import "helpers/helpers";
-// @import "helpers/bg-img-variables";
 @import "helpers/mixins";
 @import "helpers/placeholders";
 @import "helpers/text-utils";
-// @import "helpers/logged-in";
-// @import "helpers/select-input-section";
+@import "helpers/logged-in";
 
 @import "elements/anchors";
 @import "elements/inputs";
@@ -23,52 +16,47 @@
 
 @import "components/icons";
 @import "components/dls-widget-wrapper";
-// @import "components/adaptive-svg-buttons";
-// @import "components/megamenu";
 @import "components/nav";
-// @import "components/panels";
 @import "components/menus";
-// @import "components/video-container";
-// @import "components/video-background";
-// @import "components/social-panel";
-// @import "components/related-content";
-// @import "components/forms";
-// @import "components/forms-two-parts";
-// @import "components/icons";
-// @import "components/pager";
-// @import "components/tables";
-// @import "components/hello-bar";
-// @import "components/background-images-colors";
-// @import "components/filter-wrapper";
-// @import "components/heroes";
-// @import "components/cards";
+@import "components/entry";
+@import "components/post-list-item";
 
-// @import "layout/grid";
 @import "layout/site-header";
 @import "layout/sidebar";
 @import "layout/footer";
 
-// @import "templates/landing-page-template";
+@import "templates/single-page-template";
 
 @import "pages/home";
 // @import "pages/digital-page";
 // @import "pages/print-page";
 // @import "pages/onair-page";
 
-// @import "vendor/owl-carousel";
+// @import "vendor/fontastic";
 
 // @import "ie";
 
-.post-list-item{
-  background-color: #fff;
-  padding: 40px;
-  margin-bottom: 40px;
-  position: relative;
-  .post-edit-link{
-    background-color: #eee;
-    position: absolute;
-    padding: 5px 15px;
-    bottom: 0;
-    right: 0;
-  }
+.title,
+.description,
+.body-content,
+.downloadlink{
+  display: block;
 }
+
+// .title{
+//   background-color: blue;
+//   border: solid thin orange;
+// }
+
+// .description{
+//   background-color: pink;
+//   border: solid thin red;
+// }
+
+// .body-content{
+//   background-color: yellow;
+//   border: solid thin green;
+// }
+
+// .entry-title{}
+// .entry-content{}

@@ -3,10 +3,9 @@
     display: block;
     padding-top:5px;
     padding-bottom:5px;
+    color: $black;
     &.active-nav{
-      font-weight: bold;
-      text-decoration: underline;
-      color: $black;
+      @extend %current-menu-item;
     }
   }
   .widget ul > li{
@@ -24,10 +23,8 @@
   }
 }
 
-.sticky-sidebar{}
-
-@media only screen and (min-width: 1024px){
-  .sticky-sidebar{
+.sticky-sidebar{
+  @include desktop{
     position: fixed;
     top:0;
   }

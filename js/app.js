@@ -25,53 +25,47 @@
 			});
 		}
 
-		if ($('.digital-sidebar').length){
-			$('.textwidget').append('<ul id="digital-sections-list"></ul>');
+		// if ($('.digital-sidebar').length){
+		// 	$('.textwidget').append('<ul id="digital-sections-list"></ul>');
+
+		// 	$( ".title" ).each(function( index ) {
+		//   	var theText = $( this ).text();
+		//   	var theId = $(this).parent().attr('id');
+		//   	var theSbt = $(this).parent().data('sidebarText');
+		//   	if (theSbt){
+		//   		$("#digital-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
+		//   	} else {
+		//   		$("#digital-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
+		//   	}
+		// 	});
+		// }
+
+		// if ($('.print-sidebar').length){
+		// 	$('.textwidget').append('<ul id="print-sections-list"></ul>');
+
+		// 	$( ".title" ).each(function( index ) {
+		//   	var theText = $( this ).text();
+		//   	var theId = $(this).parent().attr('id');
+		//   	var theSbt = $(this).parent().data('sidebarText');
+		//   	if (theSbt){
+		//   		$("#print-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
+		//   	} else {
+		//   		$("#print-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
+		//   	}
+		// 	});
+		// }
+
+		if ($('.dls-sidebar').length){
+			$('.textwidget').append('<ul id="rendered-sections-list"></ul>');
 
 			$( ".title" ).each(function( index ) {
 		  	var theText = $( this ).text();
 		  	var theId = $(this).parent().attr('id');
 		  	var theSbt = $(this).parent().data('sidebarText');
 		  	if (theSbt){
-		  		$("#digital-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
-		  		// console.log(theSbt);
+		  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
 		  	} else {
-		  		$("#digital-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-		  		// console.log("not", theSbt);
-		  	}
-			});
-		}
-
-		if ($('.print-sidebar').length){
-			$('.textwidget').append('<ul id="print-sections-list"></ul>');
-
-			$( ".title" ).each(function( index ) {
-		  	var theText = $( this ).text();
-		  	var theId = $(this).parent().attr('id');
-		  	var theSbt = $(this).parent().data('sidebarText');
-		  	if (theSbt){
-		  		$("#print-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
-		  		// console.log(theSbt);
-		  	} else {
-		  		$("#print-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-		  		// console.log("not", theSbt);
-		  	}
-			});
-		}
-
-		if ($('.onair-sidebar').length){
-			$('.textwidget').append('<ul id="onair-sections-list"></ul>');
-
-			$( ".title" ).each(function( index ) {
-		  	var theText = $( this ).text();
-		  	var theId = $(this).parent().attr('id');
-		  	var theSbt = $(this).parent().data('sidebarText');
-		  	if (theSbt){
-		  		$("#onair-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
-		  		// console.log(theSbt);
-		  	} else {
-		  		$("#onair-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-		  		// console.log("not", theSbt);
+		  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
 		  	}
 			});
 		}
@@ -89,12 +83,12 @@
 
 		// calculating some values
 		var header_height = $('.site-header').outerHeight(),
-		  onair_menu = $('.onair-menu').outerHeight(),
+		  dls_menu = $('.dls-menu').outerHeight(),
 		  scroll_top_icon = $('#scroll-to-top'),
-		  nav = $('.onair-sidebar');
+		  nav = $('.dls-sidebar');
 		  sections = $('.post-list-item'),
 		  sipt = parseInt($('.site-inner').css('padding-top'), 10), 
-		  combined_height = header_height + onair_menu;
+		  combined_height = header_height + dls_menu;
 
 		// Scroll to top function 1/2
 		$(window).scroll(function(){

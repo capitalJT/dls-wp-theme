@@ -25,11 +25,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -54,11 +59,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -85,11 +95,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -117,11 +132,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -151,11 +171,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -175,7 +200,7 @@ remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 add_action( 'genesis_after_header', 'dls_digital_menu' );
 function dls_digital_menu() {
     genesis_widget_area( 'digital-menu', array(
-		'before' => '<div class="digital-menu second-level-menu widget-area"><div class="wrap">',
+		'before' => '<div class="dls-menu digital-menu second-level-menu widget-area"><div class="wrap">',
 		'after'  => '</div></div>', 
 	) );
 }
@@ -184,7 +209,7 @@ function dls_digital_menu() {
 add_action( 'genesis_after_content', 'dls_digital_sidebar' );
 function dls_digital_sidebar() {
     genesis_widget_area( 'digital-sidebar', array(
-		'before' => '<aside class="digital-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
+		'before' => '<aside class="dls-sidebar digital-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
 		'after'  => '</div></aside>', 
 	) );
 }

@@ -1,0 +1,17 @@
+.logged-in.admin-bar{
+  .searchbar-toggle{
+    top: 50px;
+  }
+}
+
+a.post-edit-link{
+  background-color: #eee;
+  border: solid thin #ddd;
+  border-radius: 4px;
+  padding: 5px 10px;
+  bottom: 0;
+  right: 0;
+  height:34px;
+  display: inline-block;
+  font-weight: $global-weight-heavy;
+}

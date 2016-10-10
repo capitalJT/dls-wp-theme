@@ -25,12 +25,17 @@ function onair_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
-			<?php echo edit_post_link( $link, $class ); ?>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
@@ -54,12 +59,17 @@ function onair_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
-			<?php echo edit_post_link( $link, $class ); ?>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
@@ -85,12 +95,18 @@ function onair_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
-			<?php echo edit_post_link( $link, $class ); ?>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
+			
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
@@ -117,18 +133,20 @@ function onair_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
-			<?php echo edit_post_link( $link, $class ); ?>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
-
-		// echo edit_post_link( $link, $class );
-		// echo edit_post_link('Edit this', '<p>', '</p>');
 		endwhile;
 	}
 	/* END - On-Air Demos */
@@ -141,7 +159,7 @@ remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
 add_action( 'genesis_after_header', 'dls_onair_menu' );
 function dls_onair_menu() {
     genesis_widget_area( 'onair-menu', array(
-		'before' => '<div class="onair-menu second-level-menu widget-area"><div class="wrap">',
+		'before' => '<div class="dls-menu onair-menu second-level-menu widget-area"><div class="wrap">',
 		'after'  => '</div></div>', 
 	) );
 }
@@ -150,7 +168,7 @@ function dls_onair_menu() {
 add_action( 'genesis_after_content', 'dls_onair_sidebar' );
 function dls_onair_sidebar() {
     genesis_widget_area( 'onair-sidebar', array(
-		'before' => '<aside class="onair-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
+		'before' => '<aside class="dls-sidebar onair-sidebar sidebar sidebar-primary widget-area"><div class="wrap">',
 		'after'  => '</div></aside>', 
 	) );  
 }
