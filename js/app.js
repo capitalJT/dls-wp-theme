@@ -113,7 +113,7 @@
 
 		// - Searchbar toggle
 		$(".searchbar-toggle").click(function(){
-		  $("#searchbar-collapse").slideToggle();
+		  $("#searchbar-collapse").slideToggle(180, "swing");
 		});
 
 	});

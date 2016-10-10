@@ -194,6 +194,8 @@ genesis_register_widget_area( array(
 //   return $content;
 // }
 
+// Removing Paragraph Tags from WYSIWYG Fields
+// remove_filter ('acf_the_content', 'wpautop');
 
 //* Remove the site footer
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );

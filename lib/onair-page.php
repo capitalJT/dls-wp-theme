@@ -81,6 +81,8 @@ function onair_loop(){
 	$structures_args = array(
 		'post_type'  => 'onair_structures',
 		'posts_per_page' => '12',
+		'orderby'=> 'date',
+		'order', 'DESC',
 	);
 
 	$onairstructures = new WP_Query($structures_args);
@@ -88,12 +90,19 @@ function onair_loop(){
 		while($onairstructures -> have_posts()): $onairstructures ->the_post();
 
 		$file = get_field('download_link');
+		$description = get_field('description');
 
 		?>
 		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description; ?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
 				if ($file){ ?>

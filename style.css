@@ -847,7 +847,7 @@ img.centered,
 
 img.alignnone,
 .alignnone {
-	margin-bottom: 12px;
+	/*margin-bottom: 12px;*/
 }
 
 a.alignleft,

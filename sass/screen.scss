@@ -48,10 +48,11 @@
 //   border: solid thin orange;
 // }
 
-// .description{
-//   background-color: pink;
-//   border: solid thin red;
-// }
+.description{
+  // background-color: pink;
+  // border: solid thin red;
+  margin-bottom: 2rem;
+}
 
 // .body-content{
 //   background-color: yellow;
@@ -62,18 +63,20 @@
 // .entry-content{}
 
 .title-slide{
-  // background-color: #eee;
   background-color: $secondary-color;
   border: solid thin #ddd;
-  padding: 80px;
+  color: white;
   .title{
-    font-size: 3.75em;
+    @extend %h1-rwd;
     font-weight: $global-weight-heavy;
     color: white;
   }
   p{
     color: white;
-    font-size: 2em;
+    @extend %h2-rwd;
     line-height: 1.125em;
+  }
+  @include medium-screen{
+    padding: 80px;
   }
 }
