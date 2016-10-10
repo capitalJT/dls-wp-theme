@@ -60,3 +60,20 @@
 
 // .entry-title{}
 // .entry-content{}
+
+.title-slide{
+  // background-color: #eee;
+  background-color: $secondary-color;
+  border: solid thin #ddd;
+  padding: 80px;
+  .title{
+    font-size: 3.75em;
+    font-weight: $global-weight-heavy;
+    color: white;
+  }
+  p{
+    color: white;
+    font-size: 2em;
+    line-height: 1.125em;
+  }
+}
