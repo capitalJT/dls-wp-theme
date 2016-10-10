@@ -25,11 +25,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -54,11 +59,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -85,11 +95,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -117,11 +132,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
@@ -151,11 +171,16 @@ function digital_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<span class="description"><?php echo the_field('description');?></span>
 			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<span class="downloadlink">
-				<a href="<?php echo $file;?>" target="_blank">
-					<button type="submit">Download!</button>
-				</a>
-			</span>
+			<?php  
+				if ($file){ ?>
+					<span class="downloadlink">
+						<a href="<?php echo $file;?>" target="_blank">
+							<button type="submit">Download!</button>
+						</a>
+					</span>
+				<?php
+				}
+			?>
 			<?php echo edit_post_link( $link, $class ); ?>
 		</section>
 
