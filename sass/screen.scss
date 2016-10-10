@@ -58,16 +58,34 @@
 
 // @import "ie";
 
+
+.logged-in.admin-bar{
+  .searchbar-toggle{
+    top: 50px;
+  }
+}
+
 .post-list-item{
   background-color: #fff;
   padding: 40px;
   margin-bottom: 40px;
-  position: relative;
+  // position: relative;
   .post-edit-link{
-    background-color: #eee;
-    position: absolute;
-    padding: 5px 15px;
-    bottom: 0;
-    right: 0;
+    // position: absolute;
   }
+}
+
+a.post-edit-link{
+  background-color: #eee;
+  padding: 5px 10px;
+  bottom: 0;
+  right: 0;
+  height:34px;
+  display: inline-block;
+}
+
+.entry{
+  // background-color: pink;
+  // border: solid thin red;
+  // padding: 0;
 }
