@@ -23,6 +23,11 @@
   }
 }
 
+.ancestor{
+  // background-color: pink;
+  margin-left: 10px;
+}
+
 .sticky-sidebar{
   @include desktop{
     position: fixed;

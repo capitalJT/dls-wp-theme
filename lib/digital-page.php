@@ -18,27 +18,39 @@ function digital_loop(){
 	$digitalsections = new WP_Query($digital_args);
 	if(($digitalsections -> have_posts()) && (is_page( 'digital' ))) {
 		while($digitalsections -> have_posts()): $digitalsections ->the_post();
-		$file = get_field('download_link');
-		?>
+		
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
+		?>
+		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
-			<?php echo edit_post_link( $link, $class ); ?>
+			
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
+
 		endwhile;
 	}
 	/* END - Digital Page Sections */
@@ -52,27 +64,39 @@ function digital_loop(){
 	$digitalelements = new WP_Query($elements_args);
 	if(($digitalelements -> have_posts()) && (is_page( 102 ))) {
 		while($digitalelements -> have_posts()): $digitalelements ->the_post();
-		$file = get_field('download_link');
-		?>
+			
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
+		?>
+		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
-			<?php echo edit_post_link( $link, $class ); ?>
+			
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
+
 		endwhile;
 	}
 	/* END - Digital Elements */
@@ -87,25 +111,34 @@ function digital_loop(){
 	if(($digitalcomponents -> have_posts()) && (is_page( 104 ))) {
 		while($digitalcomponents -> have_posts()): $digitalcomponents ->the_post();
 
-		$file = get_field('download_link');
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
 		?>
 		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
-			<?php echo edit_post_link( $link, $class ); ?>
+			
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
@@ -124,31 +157,38 @@ function digital_loop(){
 	if(($digitaltemplates -> have_posts()) && (is_page( 107 ))) {
 		while($digitaltemplates -> have_posts()): $digitaltemplates ->the_post();
 
-		$file = get_field('download_link');
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
 		?>
-
+		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
-			<?php echo edit_post_link( $link, $class ); ?>
+			
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
 
-		// echo edit_post_link( $link, $class );
-		// echo edit_post_link('Edit this', '<p>', '</p>');
 		endwhile;
 	}
 	/* END - Digital Templates */
@@ -163,31 +203,38 @@ function digital_loop(){
 	if(($digitalresources -> have_posts()) && (is_page( 109 ))) {
 		while($digitalresources -> have_posts()): $digitalresources ->the_post();
 
-		$file = get_field('download_link');
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
 		?>
-
+		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
-			<?php echo edit_post_link( $link, $class ); ?>
+			
+			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
 
-		// echo edit_post_link( $link, $class );
-		// echo edit_post_link('Edit this', '<p>', '</p>');
 		endwhile;
 	}
 	/* END - Digital Resources */

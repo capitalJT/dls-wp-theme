@@ -5,9 +5,9 @@
 	// - Searchbar toggle 
 
 	$(document).ready(function(){
-		if ($('.elements-sidebar').length){
+		// if ($('.elements-sidebar').length){
 			// $(".textwidget").text("holy shit");
-			$('.textwidget').append('<ul id="contents-list"></ul>');
+			// $('.textwidget').append('<ul id="contents-list"></ul>');
 
 			// var someList = $(".component-title");
 			// console.log(someList);
@@ -17,13 +17,13 @@
 			//   var parentId = someList[i].parent();
 			//   console.log(parentId);
 			// }
-			$( ".component-title" ).each(function( index ) {
+			// $( ".component-title" ).each(function( index ) {
 			  // console.log( index + ": " + $( this ).text() );
-			  	var theText = $( this ).text();
-			  	var theId = $(this).parent().attr('id');
-			   $("#contents-list").append('<li><a href="#'+theId+'">'  + theText + '</a></li>');
-			});
-		}
+			//   	var theText = $( this ).text();
+			//   	var theId = $(this).parent().attr('id');
+			//    $("#contents-list").append('<li><a href="#'+theId+'">'  + theText + '</a></li>');
+			// });
+		// }
 
 		if ($('.dls-sidebar').length){
 			$('.textwidget').append('<ul id="rendered-sections-list"></ul>');
@@ -32,10 +32,24 @@
 		  	var theText = $( this ).text();
 		  	var theId = $(this).parent().attr('id');
 		  	var theSbt = $(this).parent().data('sidebarText');
+
+		  	
 		  	if (theSbt){
-		  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
+		  		
+		  		if (!$(this).parent().hasClass('post-list-item')){
+		  			$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theSbt + '</a></li>');
+			  		// console.log(this, "shit dick");
+			  	} else {
+			  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
+			  	}
 		  	} else {
-		  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
+		  		
+		  		if (!$(this).parent().hasClass('post-list-item')){
+		  			$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theId + '</a></li>');
+			  		// console.log(this, "shit dick");
+			  	} else {
+			  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
+			  	}
 		  	}
 			});
 		}
@@ -97,6 +111,22 @@
 		    }
 
 		  });
+
+		  $('.title-slide-alt').each(function(){
+		  	var top = $(this).offset().top,
+		        bottom = top + $(this).outerHeight();
+        if (cur_pos >= top && cur_pos <= bottom) {
+		      nav.find('a').removeClass('active-nav');
+		      sections.removeClass('active-nav');
+		      
+		      $(this).addClass('active-nav');
+		      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active-nav');
+		    }
+		    if (cur_pos < combined_height) {
+		      nav.find('a').removeClass('active-nav');
+		    }
+		  });
+
 		});
 
 		// - Smooth scroll sidebar

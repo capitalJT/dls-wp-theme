@@ -80,3 +80,24 @@
     padding: 80px;
   }
 }
+
+.title-slide-alt{
+  @extend .title-slide;
+  background-color: $primary-color;
+  margin-bottom: 20px;
+  .title{
+    color: $light-gray;
+  }
+  p{
+    @extend %h4-rwd;
+  }
+}
+
+.manifesto-wrapper{
+  // border: solid thin red;
+  .title-slide-alt{
+    // border: solid thin pink;
+  }
+}
+
+

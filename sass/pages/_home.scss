@@ -81,7 +81,7 @@
   }
   @include medium-screen{
     width: 100%;
-    min-height: 420px;
+    min-height: 440px;
     a{
       width: 100%;
       padding: 40px 40px 60px;
@@ -89,6 +89,9 @@
       display: flex;
       align-items: center;
     }
+  }
+  @include desktop{
+    min-height: 560px;
   }
 }
 

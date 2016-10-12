@@ -13,32 +13,46 @@ function onair_loop(){
 	$onair_args = array(
 		'post_type'  => 'onair_page_sections',
 		'posts_per_page' => '12',
+		'orderby'=> 'date',
+		'order', 'DESC',
 	);
 
 	$onairsections = new WP_Query($onair_args);
 	if(($onairsections -> have_posts()) && (is_page( 31 ))) {
 		while($onairsections -> have_posts()): $onairsections ->the_post();
-		$file = get_field('download_link');
-		?>
+		
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
+		?>
+		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
+			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
+
 		endwhile;
 	}
 	/* END - On-Air Page Sections */
@@ -52,27 +66,39 @@ function onair_loop(){
 	$onairelements = new WP_Query($elements_args);
 	if(($onairelements -> have_posts()) && (is_page( 60 ))) {
 		while($onairelements -> have_posts()): $onairelements ->the_post();
-		$file = get_field('download_link');
-		?>
+			
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
+		?>
+		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
+			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
+
 		endwhile;
 	}
 	/* END - On-Air Elements */
@@ -88,9 +114,10 @@ function onair_loop(){
 	$onairstructures = new WP_Query($structures_args);
 	if(($onairstructures -> have_posts()) && (is_page( 63 ))) {
 		while($onairstructures -> have_posts()): $onairstructures ->the_post();
-
-		$file = get_field('download_link');
-		$description = get_field('description');
+		
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
 		?>
 		
@@ -98,17 +125,17 @@ function onair_loop(){
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
-					<span class="description"><?php echo $description; ?></span>
+					<span class="description"><?php echo $description;?></span>
 				<?php
 				}
 			?>
 			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
@@ -134,29 +161,40 @@ function onair_loop(){
 	if(($onairdemos -> have_posts()) && (is_page( 65 ))) {
 		while($onairdemos -> have_posts()): $onairdemos ->the_post();
 
-		$file = get_field('download_link');
+			$description = get_field('description');
+			$downloadLink = get_field('download_link');
+			$downloadCTA = "Download!";
 
 		?>
-
+		
 		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
+			<?php  
+				if ($description){ ?>
+					<span class="description"><?php echo $description;?></span>
+				<?php
+				}
+			?>
+			
 			<span class="body-content"><?php echo the_field('body_content');?></span>
 			<?php  
-				if ($file){ ?>
+				if ($downloadLink){ ?>
 					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
+						<a href="<?php echo $downloadLink;?>" target="_blank">
+							<button type="submit"><?php echo $downloadCTA; ?></button>
 						</a>
 					</span>
 				<?php
 				}
 			?>
+			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
 		</section>
 
 		<?php
+
 		endwhile;
+		
 	}
 	/* END - On-Air Demos */
 }
