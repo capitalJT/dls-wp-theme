@@ -25,7 +25,7 @@ function digital_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -47,7 +47,7 @@ function digital_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
@@ -62,7 +62,7 @@ function digital_loop(){
 	);
 
 	$digitalelements = new WP_Query($elements_args);
-	if(($digitalelements -> have_posts()) && (is_page( 102 ))) {
+	if(($digitalelements -> have_posts()) && (is_page( 153 ))) {
 		while($digitalelements -> have_posts()): $digitalelements ->the_post();
 			
 			$description = get_field('description');
@@ -71,7 +71,7 @@ function digital_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -93,7 +93,7 @@ function digital_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
@@ -117,7 +117,7 @@ function digital_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -139,7 +139,7 @@ function digital_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
@@ -163,7 +163,7 @@ function digital_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -185,7 +185,7 @@ function digital_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
@@ -209,7 +209,7 @@ function digital_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -231,7 +231,7 @@ function digital_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 

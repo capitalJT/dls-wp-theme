@@ -12,9 +12,8 @@ function onair_loop(){
 	/* START - On-Air Page Sections */
 	$onair_args = array(
 		'post_type'  => 'onair_page_sections',
-		'posts_per_page' => '12',
-		'orderby'=> 'date',
-		'order', 'DESC',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$onairsections = new WP_Query($onair_args);
@@ -27,7 +26,7 @@ function onair_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -49,7 +48,7 @@ function onair_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
@@ -73,7 +72,7 @@ function onair_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -95,7 +94,7 @@ function onair_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
@@ -121,7 +120,7 @@ function onair_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -143,7 +142,7 @@ function onair_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
@@ -167,7 +166,7 @@ function onair_loop(){
 
 		?>
 		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
+		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h3 class="title"><?php echo the_title();?></h3>
 			<?php  
 				if ($description){ ?>
@@ -189,7 +188,7 @@ function onair_loop(){
 			?>
 			
 			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</section>
+		</article>
 
 		<?php
 
