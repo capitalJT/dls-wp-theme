@@ -36,9 +36,9 @@
 
 // @import "ie";
 
-.title,
-.description,
-.body-content,
+.article-title,
+.article-description,
+.article-content,
 .downloadlink{
   display: block;
 }
@@ -48,7 +48,7 @@
 //   border: solid thin orange;
 // }
 
-.description{
+.article-description{
   // background-color: pink;
   // border: solid thin red;
   margin-bottom: 2rem;

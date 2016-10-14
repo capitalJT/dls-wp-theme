@@ -28,15 +28,15 @@
 		if ($('.dls-sidebar').length){
 			$('.textwidget').append('<ul id="rendered-sections-list"></ul>');
 
-			$( ".title" ).each(function( index ) {
-		  	var theText = $( this ).text();
+			$( ".article-title" ).each(function( index ) {
+		  	var theText = $(this).text();
 		  	var theId = $(this).parent().attr('id');
 		  	var theSbt = $(this).parent().data('sidebarText');
 
 		  	
 		  	if (theSbt){
 		  		
-		  		if (!$(this).parent().hasClass('post-list-item')){
+		  		if (!$(this).parent().hasClass('article-list-item')){
 		  			$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theSbt + '</a></li>');
 			  		// console.log(this, "shit dick");
 			  	} else {
@@ -44,7 +44,7 @@
 			  	}
 		  	} else {
 		  		
-		  		if (!$(this).parent().hasClass('post-list-item')){
+		  		if (!$(this).parent().hasClass('article-list-item')){
 		  			$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theId + '</a></li>');
 			  		// console.log(this, "shit dick");
 			  	} else {
@@ -70,7 +70,7 @@
 		  dls_menu = $('.dls-menu').outerHeight(),
 		  scroll_top_icon = $('#scroll-to-top'),
 		  nav = $('.dls-sidebar');
-		  sections = $('.post-list-item'),
+		  sections = $('.article-list-item'),
 		  sipt = parseInt($('.site-inner').css('padding-top'), 10), 
 		  combined_height = header_height + dls_menu;
 

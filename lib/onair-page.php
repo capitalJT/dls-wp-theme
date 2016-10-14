@@ -24,33 +24,7 @@ function onair_loop(){
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 	}
@@ -59,44 +33,19 @@ function onair_loop(){
 	/* START - On-Air Elements */
 	$elements_args = array(
 		'post_type'  => 'onair_elements',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$onairelements = new WP_Query($elements_args);
-	if(($onairelements -> have_posts()) && (is_page( 60 ))) {
+	if(($onairelements -> have_posts()) && (is_page( 'onair-elements' ))) {
 		while($onairelements -> have_posts()): $onairelements ->the_post();
 			
 			$description = get_field('description');
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 	}
@@ -105,9 +54,8 @@ function onair_loop(){
 	/* START - On-Air Structures */
 	$structures_args = array(
 		'post_type'  => 'onair_structures',
-		'posts_per_page' => '12',
-		'orderby'=> 'date',
-		'order', 'DESC',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$onairstructures = new WP_Query($structures_args);
@@ -118,33 +66,7 @@ function onair_loop(){
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 	}
@@ -153,7 +75,8 @@ function onair_loop(){
 	/* START - On-Air Demos */
 	$demos_args = array(
 		'post_type'  => 'onair_demos',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$onairdemos = new WP_Query($demos_args);
@@ -164,33 +87,7 @@ function onair_loop(){
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 		

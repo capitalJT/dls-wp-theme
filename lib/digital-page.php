@@ -12,7 +12,8 @@ function digital_loop(){
 	/* START - Digital Page Sections */
 	$digital_args = array(
 		'post_type'  => 'digital_pg_sections',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalsections = new WP_Query($digital_args);
@@ -22,35 +23,8 @@ function digital_loop(){
 			$description = get_field('description');
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
-
-		?>
+			get_template_part( '/includes/dls_cpt' );
 		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
-
 		endwhile;
 	}
 	/* END - Digital Page Sections */
@@ -58,7 +32,8 @@ function digital_loop(){
 	/* START - Digital Elements */
 	$elements_args = array(
 		'post_type'  => 'digital_elements',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalelements = new WP_Query($elements_args);
@@ -69,33 +44,7 @@ function digital_loop(){
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 	}
@@ -104,7 +53,8 @@ function digital_loop(){
 	/* START - Digital Components */
 	$components_args = array(
 		'post_type'  => 'digital_components',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalcomponents = new WP_Query($components_args);
@@ -115,33 +65,7 @@ function digital_loop(){
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 	}
@@ -150,7 +74,8 @@ function digital_loop(){
 	/* START - Digital Templates */
 	$templates_args = array(
 		'post_type'  => 'digital_templates',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitaltemplates = new WP_Query($templates_args);
@@ -161,33 +86,7 @@ function digital_loop(){
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 	}
@@ -196,7 +95,8 @@ function digital_loop(){
 		/* START - Digital Resources */
 	$resources_args = array(
 		'post_type'  => 'digital_resources',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalresources = new WP_Query($resources_args);
@@ -207,33 +107,7 @@ function digital_loop(){
 			$downloadLink = get_field('download_link');
 			$downloadCTA = "Download!";
 
-		?>
-		
-		<article id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<?php  
-				if ($description){ ?>
-					<span class="description"><?php echo $description;?></span>
-				<?php
-				}
-			?>
-			
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($downloadLink){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $downloadLink;?>" target="_blank">
-							<button type="submit"><?php echo $downloadCTA; ?></button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			
-			<?php echo edit_post_link('(Edit)', '<span>', '</span>'); ?>
-		</article>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 
 		endwhile;
 	}
