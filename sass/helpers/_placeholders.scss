@@ -1,3 +1,9 @@
+%pop{
+  // This is for debugging and development purposes
+  background-color: pink;
+  border: solid 1px red;
+}
+
 %bg-img{
   // background-position: center center;
   background-position: top center;
@@ -9,5 +15,5 @@
 %current-menu-item{
   color: $secondary-color;
   text-decoration: underline;
-  font-weight: $global-weight-heavy;
+  font-weight: $global-weight-bold;
 }

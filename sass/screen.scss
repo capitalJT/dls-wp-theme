@@ -3,6 +3,7 @@
 
 @import "base/colors";
 @import "base/media-queries";
+@import "base/grid";
 @import "base/typography";
 
 @import "helpers/mixins";
@@ -101,3 +102,12 @@
 }
 
 
+.entry-title a:hover,
+.entry-title a:focus {
+  color: $secondary-color;
+}
+
+// Code
+.entry-content code{
+  padding: 5px;
+}

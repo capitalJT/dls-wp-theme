@@ -29,6 +29,21 @@
   @extend %page-menu;
 }
 
+
+.menu-toggle {
+  @include desktop-max{
+    height: 50px;
+  }
+  &.activated{
+    border-bottom: solid thin #eee;
+  }
+
+}
+
+
 .second-level-menu.widget-area{
   height: 50px;
+  @include desktop-max{
+    display: none;
+  }
 }

@@ -3,15 +3,10 @@
   & > .wrap {
     padding: 10px;
   }
-  @include tablet{
-    // border: solid thick red;
-  }
 }
 
 .logo-wrapper{
   height: 50px;
-  // background-color: pink;
-  // border: solid thin blue;
   .site-logo{
     float: left;
     margin-right: 10px;
@@ -20,15 +15,18 @@
   }
   .site-name{
     color: white;
-    height: 50px;
-    line-height: 50px;
-    // border: solid thin red;
     @extend %h3-rwd;
     font-weight: bold;
-    padding-top: 4px;
+    padding-top: 10px;
   }
   @include desktop-max{
     margin-bottom: 10px;
+    
+  }
+  @include desktop{
+    .site-name{
+      padding-top: 5px;
+    }
   }
 }
 button.searchbar-toggle{

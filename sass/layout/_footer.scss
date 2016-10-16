@@ -82,6 +82,9 @@ ul#menu-footer-menu-top-left{
 }
 
 #genesis-footer-widgets{
+  .widgettitle{
+    display: none;
+  }
   .dls-widget-outer-wrapper{
     background-color: $black;
   }
@@ -100,10 +103,18 @@ ul#menu-footer-menu-top-left{
     img{
       width: 100%;
       height: auto;
-      max-width: 230px;
+      max-width: 210px;
     }
     // border: solid thin red;
     // background-color: #bbb;
+  }
+  .footer-links{
+    a{
+      &:hover{
+        color: $secondary-color;
+        text-decoration: underline;
+      }  
+    }
   }
   @include medium-screen{
     .footer-widgets-2{
@@ -129,7 +140,6 @@ ul#menu-footer-menu-top-left{
 }
 
 .social-list{
-  
   li{
     display: inline-block;
     padding-bottom: 0;

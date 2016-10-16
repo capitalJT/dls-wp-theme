@@ -38,6 +38,10 @@
         opacity: 1;
         padding-top: 0;
       }
+      .section-blurb{
+        border-color: $secondary-color;
+        background-color: rgba(0,0,0,0.45);
+      }
     }
   }
   .section-title,
@@ -54,6 +58,7 @@
     border: solid 5px white;
     display: inline-flex;
     background-color: rgba(0,0,0,0.2);
+    transition: all $global-ease-speed ease-in-out;
   }
   .section-cta{
     display: block;
