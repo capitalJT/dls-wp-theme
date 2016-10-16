@@ -219,5 +219,5 @@ add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
 }
 
 function custom_dashboard_help() {
-	echo '<p>Welcome to Custom Blog Theme! Need help? Contact the developer <a href="mailto:yourusername@gmail.com">here</a>. For a good time visit: <a href="http://www.jabaltorres.com" target="_blank">Jaballion</a></p>';
+	echo '<p>Welcome to Custom Blog Theme! Need help? Contact the developer <a href="mailto:yourusername@gmail.com">here</a>. For a good time visit: <a href="edit.php?post_type=onair_page_sections" target="_blank">Jaballion</a></p>';
 }
