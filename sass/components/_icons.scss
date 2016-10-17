@@ -1,18 +1,19 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "ajmn-font";
-  src:url("../fonts/ajmn-icon-font.eot");
-  src:url("../fonts/ajmn-icon-font.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/ajmn-icon-font.woff") format("woff"),
-    url("../fonts/ajmn-icon-font.ttf") format("truetype"),
-    url("../fonts/ajmn-icon-font.svg#ajmn-font") format("svg");
+  font-family: "ajmn-icons";
+  src:url("../fonts/ajmn-icons.eot");
+  src:url("../fonts/ajmn-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ajmn-icons.woff") format("woff"),
+    url("../fonts/ajmn-icons.ttf") format("truetype"),
+    url("../fonts/ajmn-icons.svg#ajmn-icons") format("svg");
   font-weight: normal;
   font-style: normal;
+
 }
 
 [data-icon]:before {
-  font-family: "ajmn-font" !important;
+  font-family: "ajmn-icons" !important;
   content: attr(data-icon);
   font-style: normal !important;
   font-weight: normal !important;
@@ -24,9 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="ajmn-"]:before,
-[class*=" ajmn-"]:before {
-  font-family: "ajmn-font" !important;
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "ajmn-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -37,177 +38,276 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ajmn-alert:before {
-  content: "a";
+.icon-ajmn-accessible:before {
+  content: "\61";
 }
-.ajmn-arrow:before {
-  content: "b";
+.icon-ajmn-chevron-right:before {
+  content: "\62";
 }
-.ajmn-arrow-ring:before {
-  content: "c";
+.icon-ajmn-fast-forward:before {
+  content: "\63";
 }
-.ajmn-avatar:before {
-  content: "d";
+.icon-ajmn-loading:before {
+  content: "\64";
 }
-.ajmn-calendar:before {
-  content: "e";
+.icon-ajmn-profile:before {
+  content: "\65";
 }
-.ajmn-caret-down:before {
-  content: "f";
+.icon-ajmn-star:before {
+  content: "\66";
 }
-.ajmn-caret-left:before {
-  content: "g";
+.icon-ajmn-stop:before {
+  content: "\67";
 }
-.ajmn-caret-right:before {
-  content: "h";
+.icon-ajmn-question:before {
+  content: "\68";
 }
-.ajmn-caret-up:before {
-  content: "i";
+.icon-ajmn-location:before {
+  content: "\69";
 }
-.ajmn-chat:before {
-  content: "j";
+.icon-ajmn-flag:before {
+  content: "\6a";
 }
-.ajmn-chevron-left:before {
-  content: "k";
+.icon-ajmn-clock:before {
+  content: "\6b";
 }
-.ajmn-chevron-right:before {
-  content: "l";
+.icon-ajmn-alert:before {
+  content: "\6c";
 }
-.ajmn-clock:before {
-  content: "m";
+.icon-ajmn-arrow:before {
+  content: "\6d";
 }
-.ajmn-closed-quotes:before {
-  content: "n";
+.icon-ajmn-close:before {
+  content: "\6e";
 }
-.ajmn-double-chevron-left:before {
-  content: "o";
+.icon-ajmn-forward:before {
+  content: "\6f";
 }
-.ajmn-double-chevron-right:before {
-  content: "p";
+.icon-ajmn-mail:before {
+  content: "\70";
 }
-.ajmn-download:before {
-  content: "q";
+.icon-ajmn-quote-closed:before {
+  content: "\71";
 }
-.ajmn-expand:before {
-  content: "r";
+.icon-ajmn-trash:before {
+  content: "\72";
 }
-.ajmn-facebook:before {
-  content: "s";
+.icon-ajmn-arrow-circle:before {
+  content: "\73";
 }
-.ajmn-fast-forward:before {
-  content: "t";
+.icon-ajmn-close-circle:before {
+  content: "\74";
 }
-.ajmn-forward:before {
-  content: "u";
+.icon-ajmn-globe:before {
+  content: "\75";
 }
-.ajmn-google-plus:before {
-  content: "v";
+.icon-ajmn-menu:before {
+  content: "\76";
 }
-.ajmn-grid:before {
-  content: "w";
+.icon-ajmn-quote-open:before {
+  content: "\77";
 }
-.ajmn-info:before {
-  content: "x";
+.icon-ajmn-tumblr:before {
+  content: "\78";
 }
-.ajmn-instagram:before {
-  content: "y";
+.icon-ajmn-twitter:before {
+  content: "\79";
 }
-.ajmn-justified:before {
-  content: "z";
+.icon-ajmn-record:before {
+  content: "\7a";
 }
-.ajmn-left-aligned:before {
-  content: "A";
+.icon-ajmn-more:before {
+  content: "\41";
 }
-.ajmn-linkedin:before {
-  content: "B";
+.icon-ajmn-google-plus:before {
+  content: "\42";
 }
-.ajmn-list:before {
-  content: "C";
+.icon-ajmn-complete:before {
+  content: "\43";
 }
-.ajmn-live-feed:before {
-  content: "D";
+.icon-ajmn-bookmark:before {
+  content: "\44";
 }
-.ajmn-location:before {
-  content: "E";
+.icon-ajmn-calendar:before {
+  content: "\45";
 }
-.ajmn-mail:before {
-  content: "F";
+.icon-ajmn-contacts:before {
+  content: "\46";
 }
-.ajmn-menu:before {
-  content: "G";
+.icon-ajmn-grid:before {
+  content: "\47";
 }
-.ajmn-more:before {
-  content: "H";
+.icon-ajmn-notification:before {
+  content: "\48";
 }
-.ajmn-open-quotes:before {
-  content: "I";
+.icon-ajmn-reddit:before {
+  content: "\49";
 }
-.ajmn-pause:before {
-  content: "J";
+.icon-ajmn-video:before {
+  content: "\4a";
 }
-.ajmn-photo:before {
-  content: "K";
+.icon-ajmn-video-gallery:before {
+  content: "\4b";
 }
-.ajmn-photo-gallery:before {
-  content: "L";
+.icon-ajmn-refresh:before {
+  content: "\4c";
 }
-.ajmn-play:before {
-  content: "M";
+.icon-ajmn-pause:before {
+  content: "\4d";
 }
-.ajmn-plus:before {
-  content: "N";
+.icon-ajmn-heart:before {
+  content: "\4e";
 }
-.ajmn-printer:before {
-  content: "O";
+.icon-ajmn-document:before {
+  content: "\4f";
 }
-.ajmn-record:before {
-  content: "P";
+.icon-ajmn-caret:before {
+  content: "\50";
 }
-.ajmn-refresh:before {
-  content: "Q";
+.icon-ajmn-cart:before {
+  content: "\51";
 }
-.ajmn-rewind:before {
-  content: "R";
+.icon-ajmn-document-stack:before {
+  content: "\52";
 }
-.ajmn-right-aligned:before {
-  content: "S";
+.icon-ajmn-history:before {
+  content: "\53";
 }
-.ajmn-rss:before {
-  content: "T";
+.icon-ajmn-phone:before {
+  content: "\54";
 }
-.ajmn-search:before {
-  content: "U";
+.icon-ajmn-rewind:before {
+  content: "\55";
 }
-.ajmn-settings:before {
-  content: "V";
+.icon-ajmn-vol-decrease:before {
+  content: "\56";
 }
-.ajmn-share:before {
-  content: "W";
+.icon-ajmn-vol-increase:before {
+  content: "\57";
 }
-.ajmn-star:before {
-  content: "X";
+.icon-ajmn-rss:before {
+  content: "\58";
 }
-.ajmn-stop:before {
-  content: "Y";
+.icon-ajmn-photo:before {
+  content: "\59";
 }
-.ajmn-trash:before {
-  content: "Z";
+.icon-ajmn-info:before {
+  content: "\5a";
 }
-.ajmn-twitter:before {
-  content: "0";
+.icon-ajmn-download:before {
+  content: "\30";
 }
-.ajmn-video:before {
-  content: "1";
+.icon-ajmn-chat:before {
+  content: "\31";
 }
-.ajmn-video-gallery:before {
-  content: "2";
+.icon-ajmn-check:before {
+  content: "\32";
 }
-.ajmn-volume:before {
-  content: "3";
+.icon-ajmn-edit:before {
+  content: "\33";
 }
-.ajmn-volume-up:before {
-  content: "4";
+.icon-ajmn-instagram:before {
+  content: "\34";
 }
-.ajmn-youtube:before {
-  content: "5";
+.icon-ajmn-photo-gallery:before {
+  content: "\35";
+}
+.icon-ajmn-search:before {
+  content: "\36";
+}
+.icon-ajmn-vol-off:before {
+  content: "\37";
+}
+.icon-ajmn-youtube:before {
+  content: "\38";
+}
+.icon-ajmn-setttings:before {
+  content: "\39";
+}
+.icon-ajmn-play:before {
+  content: "\21";
+}
+.icon-ajmn-linkedin:before {
+  content: "\22";
+}
+.icon-ajmn-embed:before {
+  content: "\23";
+}
+.icon-ajmn-chevron-dbl-left:before {
+  content: "\24";
+}
+.icon-ajmn-chevron-dbl-right:before {
+  content: "\25";
+}
+.icon-ajmn-expand:before {
+  content: "\26";
+}
+.icon-ajmn-list:before {
+  content: "\27";
+}
+.icon-ajmn-plus:before {
+  content: "\28";
+}
+.icon-ajmn-share:before {
+  content: "\29";
+}
+.icon-bullet:before {
+  content: "\2a";
+}
+.icon-ajmn-soundcoud:before {
+  content: "\2b";
+}
+.icon-ajmn-print:before {
+  content: "\2c";
+}
+.icon-ajmn-live-stream:before {
+  content: "\2d";
+}
+.icon-ajmn-facebook:before {
+  content: "\2e";
+}
+.icon-ajmn-chevron-left:before {
+  content: "\2f";
+}
+
+
+
+#icons{
+  input{
+    display: none;
+  }
+  .icon{
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    padding:5px;
+    &:before{
+      font-size: 2em;
+      padding: $global-padding;
+      margin: 0;
+      line-height: 1em;
+      display: inline-block;
+    }
+  }
+  [class^="icon-"]::before, 
+  [class*=" icon-"]::before {
+    transition: color .3s ease-in-out;
+  }
+  li{
+    border: solid thin #eee;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+    transition: border-color .3s ease-in-out;
+    p{
+      margin:0;
+    }
+    &:hover{
+      border-color: #bfbfbf;
+      [class^="icon-"]::before, 
+      [class*=" icon-"]::before {
+        color: $secondary-color;
+      }
+    }
+  }
 }
