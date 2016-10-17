@@ -19,12 +19,7 @@ function digital_loop(){
 	$digitalsections = new WP_Query($digital_args);
 	if(($digitalsections -> have_posts()) && (is_page( 'digital' ))) {
 		while($digitalsections -> have_posts()): $digitalsections ->the_post();
-		
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
 			get_template_part( '/includes/dls_cpt' );
-		
 		endwhile;
 	}
 	/* END - Digital Page Sections */
@@ -39,13 +34,7 @@ function digital_loop(){
 	$digitalelements = new WP_Query($elements_args);
 	if(($digitalelements -> have_posts()) && (is_page( 153 ))) {
 		while($digitalelements -> have_posts()): $digitalelements ->the_post();
-			
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Digital Elements */
@@ -60,13 +49,7 @@ function digital_loop(){
 	$digitalcomponents = new WP_Query($components_args);
 	if(($digitalcomponents -> have_posts()) && (is_page( 104 ))) {
 		while($digitalcomponents -> have_posts()): $digitalcomponents ->the_post();
-
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Digital Components */
@@ -81,13 +64,7 @@ function digital_loop(){
 	$digitaltemplates = new WP_Query($templates_args);
 	if(($digitaltemplates -> have_posts()) && (is_page( 107 ))) {
 		while($digitaltemplates -> have_posts()): $digitaltemplates ->the_post();
-
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Digital Templates */
@@ -102,13 +79,7 @@ function digital_loop(){
 	$digitalresources = new WP_Query($resources_args);
 	if(($digitalresources -> have_posts()) && (is_page( 109 ))) {
 		while($digitalresources -> have_posts()): $digitalresources ->the_post();
-
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Digital Resources */

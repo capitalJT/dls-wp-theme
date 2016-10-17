@@ -1,3 +1,8 @@
+<?php 
+  $description = get_field('description');
+  $downloadLink = get_field('download_link');
+  $downloadCTA = "Download!";
+  ?>
 <article id="<?php echo the_field('id');?>" class="article-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
   <h1 class="article-title"><?php echo the_title();?></h1>
   <?php  

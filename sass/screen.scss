@@ -15,7 +15,8 @@
 @import "elements/inputs";
 @import "elements/buttons";
 
-@import "components/icons";
+// @import "components/icons";
+@import "components/icons-alt";
 @import "components/dls-widget-wrapper";
 @import "components/nav";
 @import "components/menus";
@@ -110,4 +111,15 @@
 // Code
 .entry-content code{
   padding: 5px;
+}
+
+#typography .grid-container{
+  // @extend %pop;
+  [class*="col-"]{
+    padding: 0;
+  }
+  .row{
+    // border: solid thin #eee;
+    margin-bottom: $global-margin/2;
+  }
 }

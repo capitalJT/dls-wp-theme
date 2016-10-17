@@ -87,11 +87,11 @@ ul#menu-footer-menu-top-left{
   }
   .dls-widget-outer-wrapper{
     background-color: $black;
+    padding-bottom: $global-padding;
   }
   .footer-widgets-2{
     width: 100%;
-    // border: solid thin red;
-    margin-bottom: 20px;
+    margin-bottom: $global-margin;
     h3{
       color: white;
     }
@@ -160,8 +160,8 @@ ul#menu-footer-menu-top-left{
       background-color: rgba(255,255,255,0.2);
     }
   }
-  [class^="ajmn-"]:before,
-  [class*=" ajmn-"]:before {
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
     line-height: 45px;
   }
   @include medium-screen{

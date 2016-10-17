@@ -19,13 +19,7 @@ function onair_loop(){
 	$onairsections = new WP_Query($onair_args);
 	if(($onairsections -> have_posts()) && (is_page( 31 ))) {
 		while($onairsections -> have_posts()): $onairsections ->the_post();
-		
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - On-Air Page Sections */
@@ -40,13 +34,7 @@ function onair_loop(){
 	$onairelements = new WP_Query($elements_args);
 	if(($onairelements -> have_posts()) && (is_page( 'onair-elements' ))) {
 		while($onairelements -> have_posts()): $onairelements ->the_post();
-			
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - On-Air Elements */
@@ -61,13 +49,7 @@ function onair_loop(){
 	$onairstructures = new WP_Query($structures_args);
 	if(($onairstructures -> have_posts()) && (is_page( 63 ))) {
 		while($onairstructures -> have_posts()): $onairstructures ->the_post();
-		
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - On-Air Structures */
@@ -82,15 +64,8 @@ function onair_loop(){
 	$onairdemos = new WP_Query($demos_args);
 	if(($onairdemos -> have_posts()) && (is_page( 65 ))) {
 		while($onairdemos -> have_posts()): $onairdemos ->the_post();
-
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
-		endwhile;
-		
+		endwhile;	
 	}
 	/* END - On-Air Demos */
 }

@@ -19,13 +19,7 @@ function print_loop(){
 	$printsections = new WP_Query($print_args);
 	if(($printsections -> have_posts()) && (is_page( 18 ))) {
 		while($printsections -> have_posts()): $printsections ->the_post();
-		
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Print Page Sections */
@@ -40,13 +34,7 @@ function print_loop(){
 	$printelements = new WP_Query($elements_args);
 	if(($printelements -> have_posts()) && (is_page( 8 ))) {
 		while($printelements -> have_posts()): $printelements ->the_post();
-		
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Print Elements */
@@ -61,13 +49,7 @@ function print_loop(){
 	$printlayouts = new WP_Query($layouts_args);
 	if(($printlayouts -> have_posts()) && (is_page( 13 ))) {
 		while($printlayouts -> have_posts()): $printlayouts ->the_post();
-
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Print Layouts */
@@ -82,13 +64,7 @@ function print_loop(){
 	$printcobrands = new WP_Query($cobranding_args);
 	if(($printcobrands -> have_posts()) && (is_page( 11 ))) {
 		while($printcobrands -> have_posts()): $printcobrands ->the_post();
-
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Print Co-Branding */
@@ -103,13 +79,7 @@ function print_loop(){
 	$printapplications = new WP_Query($applications_args);
 	if(($printapplications -> have_posts()) && (is_page( 120 ))) {
 		while($printapplications -> have_posts()): $printapplications ->the_post();
-
-			$description = get_field('description');
-			$downloadLink = get_field('download_link');
-			$downloadCTA = "Download!";
-
 			get_template_part( '/includes/dls_cpt' );
-
 		endwhile;
 	}
 	/* END - Print Applications */
