@@ -19,6 +19,7 @@
 @import "components/nav";
 @import "components/menus";
 @import "components/entry";
+@import "components/search";
 @import "components/post-list-item";
 
 @import "layout/site-header";
@@ -28,6 +29,8 @@
 @import "templates/single-page-template";
 
 @import "pages/home";
+
+@import "posts/typography";
 // @import "pages/digital-page";
 // @import "pages/print-page";
 // @import "pages/onair-page";
@@ -85,11 +88,12 @@
   @extend .title-slide;
   background-color: $primary-color;
   margin-bottom: 20px;
-  .title{
+  .article-title{
     color: $light-gray;
   }
   p{
     @extend %h4-rwd;
+    line-height: 1.5em;
   }
 }
 
@@ -120,4 +124,12 @@
     // border: solid thin #eee;
     margin-bottom: $global-margin/2;
   }
+}
+
+hr.break{
+  border: none;
+  height: 5px;
+  /* Set the hr color */
+  color: $black_10; /* old IE */
+  background-color: $black_10; /* Modern Browsers */
 }

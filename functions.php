@@ -141,7 +141,7 @@ function jt_header_image() {
 	</div>
 
 	<button type="button" data-toggle="collapse" data-target="#searchbar-collapse" class="searchbar-toggle">
-	  <div class="ajmn-search"></div>
+	  <div class="icon-ajmn-search"></div>
 	</button>
 
 	<div id="searchbar-collapse" class="site-search search-collapse"><?php echo get_search_form( $echo ); ?></div>

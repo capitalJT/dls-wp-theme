@@ -22,21 +22,21 @@
   src: url('../fonts/Al-Jazeera-Arabic/Al-Jazeera-Arabic-Light.ttf') format('truetype');
 }
 
-// .arabic-light{
-//   font-family: 'Al-Jazeera-Arabic-Light';
-// }
+.arabic-light, .arabic-light p{
+  font-family: 'Al-Jazeera-Arabic-Light' !important;
+}
 
-// .arabic-regular{
-//   font-family: 'Al-Jazeera-Arabic-Regular';
-// }
+.arabic-regular, .arabic-regular p{
+  font-family: 'Al-Jazeera-Arabic-Regular';
+}
 
-// .arabic-bold{
-//   font-family: 'Al-Jazeera-Arabic-Bold';
-// }
+.arabic-bold, .arabic-bold p{
+  font-family: 'Al-Jazeera-Arabic-Bold';
+}
 
-// .arabic-heavy{
-//   font-family: 'Al-Jazeera-Arabic-Heavy';
-// }
+.arabic-heavy, .arabic-heavy p{
+  font-family: 'Al-Jazeera-Arabic-Heavy';
+}
 
 @font-face {
   font-family: 'Helvetica-Neue-LT-Bold';
@@ -51,22 +51,23 @@
   src: url('../fonts/Helvetica-Neue-LT/Helvetica-Neue-LT-Roman.otf') format('opentype');
 }
 
-// .helvetica-lt-bold{
-//   font-family: 'Helvetica-Neue-LT-Bold';
-// }
+.helvetica-lt-bold, .helvetica-lt-bold p{
+  font-family: 'Helvetica-Neue-LT-Bold';
+}
 
-// .helvetica-lt-light{
-//   font-family: 'Helvetica-Neue-LT-Light';
-// }
+.helvetica-lt-light, .helvetica-lt-light p{
+  font-family: 'Helvetica-Neue-LT-Light';
+}
 
-// .helvetica-roman{
-//   font-family: 'Helvetica-Neue-LT-Roman';
-// }
+.helvetica-roman, .helvetica-roman p{
+  font-family: 'Helvetica-Neue-LT-Roman';
+}
 
  // The font stack
 $body-font-family: 'Helvetica-Neue-LT-Regular', Helvetica, Arial, sans-serif;
 $header-font-family: $body-font-family;
 $default-font-weight: 100;
+$font-weight-bold: bold;
 $default-font-size: 1.6rem;
 $default-line-height: 1.5;
 $heading-line-height: 1.3;
@@ -87,7 +88,7 @@ $small-font-size: 1.2rem; //12px
 	margin-bottom: 0.5rem;
 	letter-spacing: 0;
 	line-height: $heading-line-height;
-	font-weight: $default-font-weight;
+	font-weight: $font-weight-bold;
 }
 
 %default_body_font {
@@ -120,11 +121,6 @@ h4, .h4,
 h5, .h5, 
 h6, .h6{
 	@extend %default-heading_font;
-}
-
-// This is here because Drupal is putting random page titles all over the place
-h1#page-title {
-  display: none;
 }
 
 p, .p {
@@ -263,6 +259,22 @@ h5, .h5 {
 }
 h6, .h6 {
 	@extend %h6-rwd;
+}
+
+
+h1.entry-title {
+  // background-color: pink;
+  // border: solid thin red;
+  @extend %h1-rwd;
+}
+
+.entry-header{
+  // border: solid thin red;
+  h1{
+   font-size: 5em;
+   line-height: 1em; 
+   margin-bottom: $global-margin / 2;
+  }
 }
 
 %panel-label{

@@ -32,6 +32,8 @@
   padding: $grid-padding; 
 }
 
+
+
 .col-1{ width: 16.66%; }
 .col-2{ width: 33.33%; }
 .col-3{ width: 50%;    }
@@ -41,9 +43,8 @@
 
 /*-- some extra column content styling --*/
 .outline, .outline *{
-  // @extend %pop;
+  @extend %pop;
   [class*='col-'] > p {
-    // background-color: #FFC2C2; 
     padding: 0;
     margin: 0;
     text-align: center; 

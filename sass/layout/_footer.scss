@@ -92,9 +92,6 @@ ul#menu-footer-menu-top-left{
   .footer-widgets-2{
     width: 100%;
     margin-bottom: $global-margin;
-    h3{
-      color: white;
-    }
   }
   .footer-widgets-3{
     width: 100%;
@@ -105,8 +102,6 @@ ul#menu-footer-menu-top-left{
       height: auto;
       max-width: 210px;
     }
-    // border: solid thin red;
-    // background-color: #bbb;
   }
   .footer-links{
     a{
@@ -174,9 +169,9 @@ ul#menu-footer-menu-top-left{
   float: left;
 }
 .footer-links{
-  margin-bottom: 15px;
-  a{
-    color: white;
+  margin-bottom: $global-margin;
+  h3, a{
+    color: $light-gray;
   }
 }
 .footer-links.network,
@@ -218,7 +213,7 @@ ul#menu-footer-menu-top-left{
 }
 .copyright-notice{
   // background-color: #eee;
-  color: white;
+  color: $light-gray;
   span{
     display: block;
   }

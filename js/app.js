@@ -42,15 +42,16 @@
 			  	} else {
 			  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
 			  	}
-		  	} else {
+		  	} 
+		  	// else {
 		  		
-		  		if (!$(this).parent().hasClass('article-list-item')){
-		  			$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theId + '</a></li>');
-			  		// console.log(this, "shit dick");
-			  	} else {
-			  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-			  	}
-		  	}
+		  	// 	if (!$(this).parent().hasClass('article-list-item')){
+		  	// 		$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theId + '</a></li>');
+			  // 		// console.log(this, "shit dick");
+			  // 	} else {
+			  // 		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
+			  // 	}
+		  	// }
 			});
 		}
 
