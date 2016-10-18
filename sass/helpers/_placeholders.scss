@@ -1,13 +1,19 @@
+%pop{
+  // This is for debugging and development purposes
+  background-color: pink;
+  border: solid 1px red;
+}
+
 %bg-img{
-  background-position: center center;
+  // background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  // background-image: $url_14;
+  // background-attachment: fixed;
 }
 
 %current-menu-item{
   color: $secondary-color;
   text-decoration: underline;
-  font-weight: $global-weight-heavy;
+  font-weight: $global-weight-bold;
 }

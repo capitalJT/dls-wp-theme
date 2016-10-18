@@ -5,9 +5,9 @@
 	// - Searchbar toggle 
 
 	$(document).ready(function(){
-		if ($('.elements-sidebar').length){
+		// if ($('.elements-sidebar').length){
 			// $(".textwidget").text("holy shit");
-			$('.textwidget').append('<ul id="contents-list"></ul>');
+			// $('.textwidget').append('<ul id="contents-list"></ul>');
 
 			// var someList = $(".component-title");
 			// console.log(someList);
@@ -17,56 +17,41 @@
 			//   var parentId = someList[i].parent();
 			//   console.log(parentId);
 			// }
-			$( ".component-title" ).each(function( index ) {
+			// $( ".component-title" ).each(function( index ) {
 			  // console.log( index + ": " + $( this ).text() );
-			  	var theText = $( this ).text();
-			  	var theId = $(this).parent().attr('id');
-			   $("#contents-list").append('<li><a href="#'+theId+'">'  + theText + '</a></li>');
-			});
-		}
-
-		// if ($('.digital-sidebar').length){
-		// 	$('.textwidget').append('<ul id="digital-sections-list"></ul>');
-
-		// 	$( ".title" ).each(function( index ) {
-		//   	var theText = $( this ).text();
-		//   	var theId = $(this).parent().attr('id');
-		//   	var theSbt = $(this).parent().data('sidebarText');
-		//   	if (theSbt){
-		//   		$("#digital-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
-		//   	} else {
-		//   		$("#digital-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-		//   	}
-		// 	});
-		// }
-
-		// if ($('.print-sidebar').length){
-		// 	$('.textwidget').append('<ul id="print-sections-list"></ul>');
-
-		// 	$( ".title" ).each(function( index ) {
-		//   	var theText = $( this ).text();
-		//   	var theId = $(this).parent().attr('id');
-		//   	var theSbt = $(this).parent().data('sidebarText');
-		//   	if (theSbt){
-		//   		$("#print-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
-		//   	} else {
-		//   		$("#print-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-		//   	}
-		// 	});
+			//   	var theText = $( this ).text();
+			//   	var theId = $(this).parent().attr('id');
+			//    $("#contents-list").append('<li><a href="#'+theId+'">'  + theText + '</a></li>');
+			// });
 		// }
 
 		if ($('.dls-sidebar').length){
 			$('.textwidget').append('<ul id="rendered-sections-list"></ul>');
 
-			$( ".title" ).each(function( index ) {
-		  	var theText = $( this ).text();
+			$( ".article-title" ).each(function( index ) {
+		  	var theText = $(this).text();
 		  	var theId = $(this).parent().attr('id');
 		  	var theSbt = $(this).parent().data('sidebarText');
+
+		  	
 		  	if (theSbt){
-		  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
-		  	} else {
-		  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-		  	}
+		  		
+		  		if (!$(this).parent().hasClass('article-list-item')){
+		  			$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theSbt + '</a></li>');
+			  		// console.log(this, "shit dick");
+			  	} else {
+			  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
+			  	}
+		  	} 
+		  	// else {
+		  		
+		  	// 	if (!$(this).parent().hasClass('article-list-item')){
+		  	// 		$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theId + '</a></li>');
+			  // 		// console.log(this, "shit dick");
+			  // 	} else {
+			  // 		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
+			  // 	}
+		  	// }
 			});
 		}
 
@@ -86,7 +71,7 @@
 		  dls_menu = $('.dls-menu').outerHeight(),
 		  scroll_top_icon = $('#scroll-to-top'),
 		  nav = $('.dls-sidebar');
-		  sections = $('.post-list-item'),
+		  sections = $('.article-list-item'),
 		  sipt = parseInt($('.site-inner').css('padding-top'), 10), 
 		  combined_height = header_height + dls_menu;
 
@@ -127,6 +112,22 @@
 		    }
 
 		  });
+
+		  $('.title-slide-alt').each(function(){
+		  	var top = $(this).offset().top,
+		        bottom = top + $(this).outerHeight();
+        if (cur_pos >= top && cur_pos <= bottom) {
+		      nav.find('a').removeClass('active-nav');
+		      sections.removeClass('active-nav');
+		      
+		      $(this).addClass('active-nav');
+		      nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active-nav');
+		    }
+		    if (cur_pos < combined_height) {
+		      nav.find('a').removeClass('active-nav');
+		    }
+		  });
+
 		});
 
 		// - Smooth scroll sidebar
@@ -143,7 +144,7 @@
 
 		// - Searchbar toggle
 		$(".searchbar-toggle").click(function(){
-		  $("#searchbar-collapse").slideToggle();
+		  $("#searchbar-collapse").slideToggle(180, "swing");
 		});
 
 	});

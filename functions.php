@@ -141,7 +141,7 @@ function jt_header_image() {
 	</div>
 
 	<button type="button" data-toggle="collapse" data-target="#searchbar-collapse" class="searchbar-toggle">
-	  <div class="ajmn-search"></div>
+	  <div class="icon-ajmn-search"></div>
 	</button>
 
 	<div id="searchbar-collapse" class="site-search search-collapse"><?php echo get_search_form( $echo ); ?></div>
@@ -194,6 +194,8 @@ genesis_register_widget_area( array(
 //   return $content;
 // }
 
+// Removing Paragraph Tags from WYSIWYG Fields
+// remove_filter ('acf_the_content', 'wpautop');
 
 //* Remove the site footer
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
@@ -206,4 +208,16 @@ function bg_custom_footer() { ?>
 	<div class="site-footer"><div class="wrap"><p>Handcrafted with <span class="dashicons dashicons-smiley"></span> by Jaballion. Powered by the <a href="#">DLS Platform</a>. <a href="http://briangardner.com/contact/">Get in Touch</a>.</p></div></div>
 
 <?php
+}
+
+
+// Custom Dashboard Widget
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
+	function my_custom_dashboard_widgets() {
+	global $wp_meta_boxes;
+	wp_add_dashboard_widget('custom_help_widget', 'Theme Support', 'custom_dashboard_help');
+}
+
+function custom_dashboard_help() {
+	echo '<p>Welcome to Custom Blog Theme! Need help? Contact the developer <a href="mailto:yourusername@gmail.com">here</a>. For a good time visit: <a href="edit.php?post_type=onair_page_sections" target="_blank">Jaballion</a></p>';
 }

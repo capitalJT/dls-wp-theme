@@ -3,15 +3,10 @@
   & > .wrap {
     padding: 10px;
   }
-  @include tablet{
-    // border: solid thick red;
-  }
 }
 
 .logo-wrapper{
   height: 50px;
-  // background-color: pink;
-  // border: solid thin blue;
   .site-logo{
     float: left;
     margin-right: 10px;
@@ -20,79 +15,17 @@
   }
   .site-name{
     color: white;
-    height: 50px;
-    line-height: 50px;
-    // border: solid thin red;
     @extend %h3-rwd;
     font-weight: bold;
-    padding-top: 4px;
+    padding-top: 10px;
   }
   @include desktop-max{
     margin-bottom: 10px;
-  }
-}
-button.searchbar-toggle{
-  padding: 5px;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  .ajmn-search{
-    font-size: 1.5em;
-    padding-top:5px;
-    line-height: 0.9em;
+    
   }
   @include desktop{
-    display: none;
-  }
-}
-#searchbar-collapse{
-  display: none;
-  @include desktop {
-    display: block !important;
-  }
-}
-.site-search{
-  .search-form{
-    float: none;
-    width: 100%;
-    margin: 0;
-    input{
-      float: left;
-    }
-    input[type="search"]{
-      width: 70%;
-    }
-    input[type="submit"]{
-      margin-top: 0;
-      width: 30%;
-    }
-  }
-  @include tablet {
-    .search-form{
-      input[type="search"]{
-        width: 80%;
-      }
-      input[type="submit"]{
-        margin-top: 0;
-        width: 20%;
-      }
-    }
-  }
-  @include desktop {
-    width: 30%;
-    float: right;
-    margin-top: -47px;
-    .search-form{
-      float: right;
-      input[type="search"]{
-        width: 70%;
-      }
-      input[type="submit"]{
-        margin-top: 0;
-        width: 30%;
-      }
+    .site-name{
+      padding-top: 5px;
     }
   }
 }

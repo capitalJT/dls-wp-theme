@@ -3,6 +3,7 @@
 
 @import "base/colors";
 @import "base/media-queries";
+@import "base/grid";
 @import "base/typography";
 
 @import "helpers/mixins";
@@ -13,12 +14,12 @@
 @import "elements/anchors";
 @import "elements/inputs";
 @import "elements/buttons";
-
 @import "components/icons";
 @import "components/dls-widget-wrapper";
 @import "components/nav";
 @import "components/menus";
 @import "components/entry";
+@import "components/search";
 @import "components/post-list-item";
 
 @import "layout/site-header";
@@ -28,6 +29,8 @@
 @import "templates/single-page-template";
 
 @import "pages/home";
+
+@import "posts/typography";
 // @import "pages/digital-page";
 // @import "pages/print-page";
 // @import "pages/onair-page";
@@ -36,9 +39,9 @@
 
 // @import "ie";
 
-.title,
-.description,
-.body-content,
+.article-title,
+.article-description,
+.article-content,
 .downloadlink{
   display: block;
 }
@@ -48,10 +51,11 @@
 //   border: solid thin orange;
 // }
 
-// .description{
-//   background-color: pink;
-//   border: solid thin red;
-// }
+.article-description{
+  // background-color: pink;
+  // border: solid thin red;
+  margin-bottom: 2rem;
+}
 
 // .body-content{
 //   background-color: yellow;
@@ -60,3 +64,72 @@
 
 // .entry-title{}
 // .entry-content{}
+
+.title-slide{
+  background-color: $secondary-color;
+  border: solid thin #ddd;
+  color: white;
+  .title{
+    @extend %h1-rwd;
+    font-weight: $global-weight-heavy;
+    color: white;
+  }
+  p{
+    color: white;
+    @extend %h2-rwd;
+    line-height: 1.125em;
+  }
+  @include medium-screen{
+    padding: 80px;
+  }
+}
+
+.title-slide-alt{
+  @extend .title-slide;
+  background-color: $primary-color;
+  margin-bottom: 20px;
+  .article-title{
+    color: $light-gray;
+  }
+  p{
+    @extend %h4-rwd;
+    line-height: 1.5em;
+  }
+}
+
+.manifesto-wrapper{
+  // border: solid thin red;
+  .title-slide-alt{
+    // border: solid thin pink;
+  }
+}
+
+
+.entry-title a:hover,
+.entry-title a:focus {
+  color: $secondary-color;
+}
+
+// Code
+.entry-content code{
+  padding: 5px;
+}
+
+#typography .grid-container{
+  // @extend %pop;
+  [class*="col-"]{
+    padding: 0;
+  }
+  .row{
+    // border: solid thin #eee;
+    margin-bottom: $global-margin/2;
+  }
+}
+
+hr.break{
+  border: none;
+  height: 5px;
+  /* Set the hr color */
+  color: $black_10; /* old IE */
+  background-color: $black_10; /* Modern Browsers */
+}

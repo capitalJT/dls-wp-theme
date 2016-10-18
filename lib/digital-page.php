@@ -12,33 +12,14 @@ function digital_loop(){
 	/* START - Digital Page Sections */
 	$digital_args = array(
 		'post_type'  => 'digital_pg_sections',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalsections = new WP_Query($digital_args);
 	if(($digitalsections -> have_posts()) && (is_page( 'digital' ))) {
 		while($digitalsections -> have_posts()): $digitalsections ->the_post();
-		$file = get_field('download_link');
-		?>
-
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($file){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			<?php echo edit_post_link( $link, $class ); ?>
-		</section>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 		endwhile;
 	}
 	/* END - Digital Page Sections */
@@ -46,33 +27,14 @@ function digital_loop(){
 	/* START - Digital Elements */
 	$elements_args = array(
 		'post_type'  => 'digital_elements',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalelements = new WP_Query($elements_args);
-	if(($digitalelements -> have_posts()) && (is_page( 102 ))) {
+	if(($digitalelements -> have_posts()) && (is_page( 153 ))) {
 		while($digitalelements -> have_posts()): $digitalelements ->the_post();
-		$file = get_field('download_link');
-		?>
-
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($file){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			<?php echo edit_post_link( $link, $class ); ?>
-		</section>
-
-		<?php
+			get_template_part( '/includes/dls_cpt' );
 		endwhile;
 	}
 	/* END - Digital Elements */
@@ -80,36 +42,14 @@ function digital_loop(){
 	/* START - Digital Components */
 	$components_args = array(
 		'post_type'  => 'digital_components',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalcomponents = new WP_Query($components_args);
 	if(($digitalcomponents -> have_posts()) && (is_page( 104 ))) {
 		while($digitalcomponents -> have_posts()): $digitalcomponents ->the_post();
-
-		$file = get_field('download_link');
-
-		?>
-		
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($file){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			<?php echo edit_post_link( $link, $class ); ?>
-		</section>
-
-		<?php
-
+			get_template_part( '/includes/dls_cpt' );
 		endwhile;
 	}
 	/* END - Digital Components */
@@ -117,38 +57,14 @@ function digital_loop(){
 	/* START - Digital Templates */
 	$templates_args = array(
 		'post_type'  => 'digital_templates',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitaltemplates = new WP_Query($templates_args);
 	if(($digitaltemplates -> have_posts()) && (is_page( 107 ))) {
 		while($digitaltemplates -> have_posts()): $digitaltemplates ->the_post();
-
-		$file = get_field('download_link');
-
-		?>
-
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($file){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			<?php echo edit_post_link( $link, $class ); ?>
-		</section>
-
-		<?php
-
-		// echo edit_post_link( $link, $class );
-		// echo edit_post_link('Edit this', '<p>', '</p>');
+			get_template_part( '/includes/dls_cpt' );
 		endwhile;
 	}
 	/* END - Digital Templates */
@@ -156,38 +72,14 @@ function digital_loop(){
 		/* START - Digital Resources */
 	$resources_args = array(
 		'post_type'  => 'digital_resources',
-		'posts_per_page' => '12',
+		'orderby'=> 'menu_order',
+		'order', 'ASC',
 	);
 
 	$digitalresources = new WP_Query($resources_args);
 	if(($digitalresources -> have_posts()) && (is_page( 109 ))) {
 		while($digitalresources -> have_posts()): $digitalresources ->the_post();
-
-		$file = get_field('download_link');
-
-		?>
-
-		<section id="<?php echo the_field('id');?>" class="post-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
-			<h3 class="title"><?php echo the_title();?></h3>
-			<span class="description"><?php echo the_field('description');?></span>
-			<span class="body-content"><?php echo the_field('body_content');?></span>
-			<?php  
-				if ($file){ ?>
-					<span class="downloadlink">
-						<a href="<?php echo $file;?>" target="_blank">
-							<button type="submit">Download!</button>
-						</a>
-					</span>
-				<?php
-				}
-			?>
-			<?php echo edit_post_link( $link, $class ); ?>
-		</section>
-
-		<?php
-
-		// echo edit_post_link( $link, $class );
-		// echo edit_post_link('Edit this', '<p>', '</p>');
+			get_template_part( '/includes/dls_cpt' );
 		endwhile;
 	}
 	/* END - Digital Resources */

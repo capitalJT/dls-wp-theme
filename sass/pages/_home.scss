@@ -38,6 +38,10 @@
         opacity: 1;
         padding-top: 0;
       }
+      .section-blurb{
+        border-color: $secondary-color;
+        background-color: rgba(0,0,0,0.45);
+      }
     }
   }
   .section-title,
@@ -51,9 +55,10 @@
   .section-blurb{
     padding: 20px 30px;
     margin-bottom: 20px;
-    border: solid 8px white;
+    border: solid 5px white;
     display: inline-flex;
     background-color: rgba(0,0,0,0.2);
+    transition: all $global-ease-speed ease-in-out;
   }
   .section-cta{
     display: block;
@@ -62,8 +67,8 @@
     padding-top: 10px;
     text-transform: lowercase;
     &:after{
-      font-family: "ajmn-font";
-      content: "b";
+      font-family: "ajmn-icons";
+      content: "\6d";
       color: $secondary-color;
       display: inline-block;
       transform: rotate(270deg);
@@ -81,7 +86,7 @@
   }
   @include medium-screen{
     width: 100%;
-    min-height: 420px;
+    min-height: 440px;
     a{
       width: 100%;
       padding: 40px 40px 60px;
@@ -89,6 +94,9 @@
       display: flex;
       align-items: center;
     }
+  }
+  @include desktop{
+    min-height: 560px;
   }
 }
 

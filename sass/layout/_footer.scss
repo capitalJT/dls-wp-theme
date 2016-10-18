@@ -82,16 +82,16 @@ ul#menu-footer-menu-top-left{
 }
 
 #genesis-footer-widgets{
+  .widgettitle{
+    display: none;
+  }
   .dls-widget-outer-wrapper{
     background-color: $black;
+    padding-bottom: $global-padding;
   }
   .footer-widgets-2{
     width: 100%;
-    // border: solid thin red;
-    margin-bottom: 20px;
-    h3{
-      color: white;
-    }
+    margin-bottom: $global-margin;
   }
   .footer-widgets-3{
     width: 100%;
@@ -100,10 +100,16 @@ ul#menu-footer-menu-top-left{
     img{
       width: 100%;
       height: auto;
-      max-width: 230px;
+      max-width: 210px;
     }
-    // border: solid thin red;
-    // background-color: #bbb;
+  }
+  .footer-links{
+    a{
+      &:hover{
+        color: $secondary-color;
+        text-decoration: underline;
+      }  
+    }
   }
   @include medium-screen{
     .footer-widgets-2{
@@ -129,7 +135,6 @@ ul#menu-footer-menu-top-left{
 }
 
 .social-list{
-  
   li{
     display: inline-block;
     padding-bottom: 0;
@@ -150,8 +155,8 @@ ul#menu-footer-menu-top-left{
       background-color: rgba(255,255,255,0.2);
     }
   }
-  [class^="ajmn-"]:before,
-  [class*=" ajmn-"]:before {
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
     line-height: 45px;
   }
   @include medium-screen{
@@ -164,9 +169,9 @@ ul#menu-footer-menu-top-left{
   float: left;
 }
 .footer-links{
-  margin-bottom: 15px;
-  a{
-    color: white;
+  margin-bottom: $global-margin;
+  h3, a{
+    color: $light-gray;
   }
 }
 .footer-links.network,
@@ -208,7 +213,7 @@ ul#menu-footer-menu-top-left{
 }
 .copyright-notice{
   // background-color: #eee;
-  color: white;
+  color: $light-gray;
   span{
     display: block;
   }

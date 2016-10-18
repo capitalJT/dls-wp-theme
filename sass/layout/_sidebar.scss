@@ -23,6 +23,11 @@
   }
 }
 
+.ancestor{
+  // background-color: pink;
+  margin-left: 10px;
+}
+
 .sticky-sidebar{
   @include desktop{
     position: fixed;
@@ -44,5 +49,13 @@
 @media only screen and (max-width: 1200px){
   .sticky-sidebar{
     margin-left: 660px;
+  }
+}
+
+.dls-sidebar{
+  // background-color: pink;
+  // border: solid thin red;
+  .widgettitle{
+    font-weight: bold;
   }
 }

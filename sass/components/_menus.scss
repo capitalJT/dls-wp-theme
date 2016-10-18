@@ -29,6 +29,30 @@
   @extend %page-menu;
 }
 
+
+.menu-toggle {
+  @include desktop-max{
+    height: 50px;
+  }
+  &.activated{
+    border-bottom: solid thin #eee;
+  }
+
+}
+
+.js nav button:focus,
+.js .menu-toggle:focus {
+  background-color: #fff;
+  color: $black;
+}
+
 .second-level-menu.widget-area{
   height: 50px;
+  @include desktop-max{
+    display: none;
+  }
+}
+
+#mobile-genesis-nav-primary.activated{
+  color: $secondary-color;
 }

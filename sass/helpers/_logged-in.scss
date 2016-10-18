@@ -2,6 +2,18 @@
   .searchbar-toggle{
     top: 50px;
   }
+
+  @media screen and (min-width: 1024px){
+    .sticky-sidebar {
+      top: 30px;
+    }
+  }
+  // create some space between the download button and the edit button
+  .downloadlink{
+    button{
+      margin-bottom: 15px;
+    }
+  }
 }
 
 a.post-edit-link{
@@ -14,4 +26,7 @@ a.post-edit-link{
   height:34px;
   display: inline-block;
   font-weight: $global-weight-heavy;
+  &:hover{
+    background-color: #ddd;
+  }
 }
