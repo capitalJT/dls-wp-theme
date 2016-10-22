@@ -17,7 +17,7 @@ function onair_loop(){
 	);
 
 	$onairsections = new WP_Query($onair_args);
-	if(($onairsections -> have_posts()) && (is_page( 31 ))) {
+	if(($onairsections -> have_posts()) && (is_page( 'on-air' ))) {
 		while($onairsections -> have_posts()): $onairsections ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -32,7 +32,7 @@ function onair_loop(){
 	);
 
 	$onairelements = new WP_Query($elements_args);
-	if(($onairelements -> have_posts()) && (is_page( 'onair-elements' ))) {
+	if(($onairelements -> have_posts()) && (is_page( 'elements' ))) {
 		while($onairelements -> have_posts()): $onairelements ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -47,7 +47,7 @@ function onair_loop(){
 	);
 
 	$onairstructures = new WP_Query($structures_args);
-	if(($onairstructures -> have_posts()) && (is_page( 63 ))) {
+	if(($onairstructures -> have_posts()) && (is_page( 'structures' ))) {
 		while($onairstructures -> have_posts()): $onairstructures ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -62,7 +62,7 @@ function onair_loop(){
 	);
 
 	$onairdemos = new WP_Query($demos_args);
-	if(($onairdemos -> have_posts()) && (is_page( 65 ))) {
+	if(($onairdemos -> have_posts()) && (is_page( 'demos' ))) {
 		while($onairdemos -> have_posts()): $onairdemos ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;	

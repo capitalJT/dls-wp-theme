@@ -431,9 +431,8 @@
     "menu_icon": "dashicons-media-document",
     "supports": [
       "title",
-      "thumbnail",
       "revisions",
-      "page-attributes"
+      "author"
     ],
     "taxonomies": [
       

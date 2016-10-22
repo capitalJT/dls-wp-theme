@@ -32,7 +32,7 @@ function digital_loop(){
 	);
 
 	$digitalelements = new WP_Query($elements_args);
-	if(($digitalelements -> have_posts()) && (is_page( 153 ))) {
+	if(($digitalelements -> have_posts()) && (is_page( 'elements' ))) {
 		while($digitalelements -> have_posts()): $digitalelements ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -47,7 +47,7 @@ function digital_loop(){
 	);
 
 	$digitalcomponents = new WP_Query($components_args);
-	if(($digitalcomponents -> have_posts()) && (is_page( 104 ))) {
+	if(($digitalcomponents -> have_posts()) && (is_page( 'components' ))) {
 		while($digitalcomponents -> have_posts()): $digitalcomponents ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -62,7 +62,7 @@ function digital_loop(){
 	);
 
 	$digitaltemplates = new WP_Query($templates_args);
-	if(($digitaltemplates -> have_posts()) && (is_page( 107 ))) {
+	if(($digitaltemplates -> have_posts()) && (is_page( 'templates' ))) {
 		while($digitaltemplates -> have_posts()): $digitaltemplates ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -77,7 +77,7 @@ function digital_loop(){
 	);
 
 	$digitalresources = new WP_Query($resources_args);
-	if(($digitalresources -> have_posts()) && (is_page( 109 ))) {
+	if(($digitalresources -> have_posts()) && (is_page( 'resources' ))) {
 		while($digitalresources -> have_posts()): $digitalresources ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;

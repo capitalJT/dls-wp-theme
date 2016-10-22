@@ -1,0 +1,36 @@
+.title-slide{
+  background-color: $secondary-color;
+  border: solid thin #ddd;
+  color: white;
+  padding: $global-padding;
+  .title{
+    @extend %h1-rwd;
+    font-weight: $global-weight-heavy;
+  }
+  .title, p{
+    color: white;
+  }
+  p{
+    @extend %h2-rwd;
+    line-height: 1.125em;
+  }
+  @include medium-screen{
+    padding: $global-padding * 2;
+  }
+  @include desktop{
+    padding: $global-padding * 4;
+  }
+}
+
+.title-slide-alt{
+  @extend .title-slide;
+  background-color: $primary-color;
+  margin-bottom: $global-margin;
+  .article-title{
+    color: $light-gray;
+  }
+  p{
+    @extend %h4-rwd;
+    line-height: 1.5em;
+  }
+}

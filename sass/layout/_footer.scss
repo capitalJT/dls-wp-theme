@@ -159,9 +159,9 @@ ul#menu-footer-menu-top-left{
   [class*=" icon-"]:before {
     line-height: 45px;
   }
-  @include medium-screen{
-    text-align: right;
-  }
+  // @include medium-screen{
+  //   text-align: right;
+  // }
 }
 
 .footer-links.network,
