@@ -147,5 +147,7 @@
 		  $("#searchbar-collapse").slideToggle(180, "swing");
 		});
 
+		// rearrange sidebar
+		$(".dls-sidebar").insertBefore("#genesis-content");
 	});
 })( document, jQuery );

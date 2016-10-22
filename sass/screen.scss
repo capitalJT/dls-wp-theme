@@ -15,12 +15,14 @@
 @import "elements/inputs";
 @import "elements/buttons";
 @import "components/icons";
+@import "components/aja-icons";
 @import "components/dls-widget-wrapper";
 @import "components/nav";
 @import "components/menus";
 @import "components/entry";
 @import "components/search";
 @import "components/post-list-item";
+@import "components/title-slide";
 
 @import "layout/site-header";
 @import "layout/sidebar";
@@ -51,51 +53,26 @@
 //   border: solid thin orange;
 // }
 
-.article-description{
+.article-title,
+.article-description,
+.article-content{
   // background-color: pink;
   // border: solid thin red;
   margin-bottom: 2rem;
 }
 
-// .body-content{
-//   background-color: yellow;
-//   border: solid thin green;
-// }
+.article-content{
+  ul{
+    margin-bottom: $global-margin / 2;
+    padding-left: 2rem;
+  }
+  li{
+    list-style-type: disc;
+  }
+}
 
 // .entry-title{}
 // .entry-content{}
-
-.title-slide{
-  background-color: $secondary-color;
-  border: solid thin #ddd;
-  color: white;
-  .title{
-    @extend %h1-rwd;
-    font-weight: $global-weight-heavy;
-    color: white;
-  }
-  p{
-    color: white;
-    @extend %h2-rwd;
-    line-height: 1.125em;
-  }
-  @include medium-screen{
-    padding: 80px;
-  }
-}
-
-.title-slide-alt{
-  @extend .title-slide;
-  background-color: $primary-color;
-  margin-bottom: 20px;
-  .article-title{
-    color: $light-gray;
-  }
-  p{
-    @extend %h4-rwd;
-    line-height: 1.5em;
-  }
-}
 
 .manifesto-wrapper{
   // border: solid thin red;

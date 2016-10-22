@@ -1,17 +1,15 @@
 %page-menu{
-  text-align: right;
-  margin-top: -50px;
-  li{
-    display: inline-block;
-    a{
-      height: 50px;
-      line-height: 50px;
-      padding: 0 15px;
-      display: inline-block;
-      color: $black;
-      &:hover{
-        @extend %current-menu-item;
-      }
+  .wrap{
+    background-color: #fff;    
+  }
+  a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    display: block;
+    color: $black;
+    &:hover{
+      @extend %current-menu-item;
     }
   }
   .widget ul > li{
@@ -21,13 +19,30 @@
   .current-menu-item > a{
     @extend %current-menu-item;
   }
+  @include desktop-max{
+    border-bottom: solid thin $light-gray;
+    .wrap{
+      padding-top: $grid-padding;
+      padding-bottom: $grid-padding;
+    }
+  }
+  @include medium-only{
+    .wrap{
+      padding-left: $grid-padding *1.5;
+    }
+  }
+  @include desktop{
+    text-align: right;
+    margin-top: -50px;
+    li, a{
+      display: inline-block;
+    }
+  }
 }
 
-.digital-menu, 
-.print-menu, 
-.onair-menu{
-  @extend %page-menu;
-}
+// .digital-menu, 
+// .print-menu, 
+// .onair-menu{}
 
 
 .menu-toggle {
@@ -37,7 +52,6 @@
   &.activated{
     border-bottom: solid thin #eee;
   }
-
 }
 
 .js nav button:focus,
@@ -46,10 +60,12 @@
   color: $black;
 }
 
-.second-level-menu.widget-area{
-  height: 50px;
+.dls-menu{
+
+  @extend %page-menu;
   @include desktop-max{
-    display: none;
+    // padding: $global-padding;
+    padding: 5%;
   }
 }
 

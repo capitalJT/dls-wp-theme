@@ -8,7 +8,6 @@ add_action('genesis_loop', 'print_loop');
 
 function print_loop(){
 
-
 	/* START - Print Page Sections */
 	$print_args = array(
 		'post_type'  => 'print_page_sections',
@@ -17,7 +16,7 @@ function print_loop(){
 	);
 
 	$printsections = new WP_Query($print_args);
-	if(($printsections -> have_posts()) && (is_page( 18 ))) {
+	if(($printsections -> have_posts()) && (is_page( 'print' ))) {
 		while($printsections -> have_posts()): $printsections ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -32,7 +31,7 @@ function print_loop(){
 	);
 
 	$printelements = new WP_Query($elements_args);
-	if(($printelements -> have_posts()) && (is_page( 8 ))) {
+	if(($printelements -> have_posts()) && (is_page( 'elements' ))) {
 		while($printelements -> have_posts()): $printelements ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -47,7 +46,7 @@ function print_loop(){
 	);
 
 	$printlayouts = new WP_Query($layouts_args);
-	if(($printlayouts -> have_posts()) && (is_page( 13 ))) {
+	if(($printlayouts -> have_posts()) && (is_page( 'layouts' ))) {
 		while($printlayouts -> have_posts()): $printlayouts ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -62,7 +61,7 @@ function print_loop(){
 	);
 
 	$printcobrands = new WP_Query($cobranding_args);
-	if(($printcobrands -> have_posts()) && (is_page( 11 ))) {
+	if(($printcobrands -> have_posts()) && (is_page( 'cobranding' ))) {
 		while($printcobrands -> have_posts()): $printcobrands ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
@@ -77,7 +76,7 @@ function print_loop(){
 	);
 
 	$printapplications = new WP_Query($applications_args);
-	if(($printapplications -> have_posts()) && (is_page( 120 ))) {
+	if(($printapplications -> have_posts()) && (is_page( 'applications' ))) {
 		while($printapplications -> have_posts()): $printapplications ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;

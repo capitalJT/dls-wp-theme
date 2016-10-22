@@ -32,6 +32,8 @@ button.searchbar-toggle{
     margin: 0;
     input{
       float: left;
+      border-radius: 0;
+      -webkit-appearance: none;
     }
     input[type="search"]{
       width: 70%;
