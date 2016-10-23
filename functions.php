@@ -7,7 +7,7 @@
  * @package DLS Theme
  * @author  StudioPress
  * @license GPL-2.0+
- * @link    http://www.studiopress.com/
+ * @link    http://www.jabaltorres.com/
  */
 
 //* Start the engine
@@ -27,7 +27,7 @@ include_once( get_stylesheet_directory() . '/lib/output.php' );
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'DLS Theme' );
-define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
+define( 'CHILD_THEME_URL', 'http://www.jabaltorres.com/' );
 define( 'CHILD_THEME_VERSION', '2.2.4' );
 
 //* Enqueue Scripts and Styles
