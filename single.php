@@ -21,13 +21,17 @@ remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 
 add_action('genesis_entry_content', 'dls_single_loop');
 function dls_single_loop(){
+	$description = get_field('description');
+  $downloadLink = get_field('download_link');
+  $downloadCTA = "Download!";
+
 	if ( is_singular() ) {?>
 	
 		<article id="<?php echo the_field('id');?>" class="article-list-item <?php echo the_field('class_list');?>" data-sidebar-text="<?php echo the_field('sidebar_text');?>">
 			<h1 class="article-title"><?php echo the_title();?></h1>
 			<?php  
 				if ($description){ ?>
-					<p class="article-description"><?php echo $description;?></p>
+					<div class="article-description"><?php echo $description;?></div>
 				<?php
 				}
 			?>
