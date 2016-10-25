@@ -149,5 +149,6 @@
 
 		// rearrange sidebar
 		$(".dls-sidebar").insertBefore("#genesis-content");
+
 	});
 })( document, jQuery );

@@ -3,11 +3,12 @@
   border: solid thin #ddd;
   color: white;
   padding: $global-padding;
-  .title{
+  .article-title{
     @extend %h1-rwd;
     font-weight: $global-weight-heavy;
+    color: white;
   }
-  .title, p{
+  .article-title, p{
     color: white;
   }
   p{
