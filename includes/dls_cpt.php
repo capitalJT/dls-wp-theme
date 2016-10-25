@@ -7,7 +7,7 @@
   <h1 class="article-title"><?php echo the_title();?></h1>
   <?php  
     if ($description){ ?>
-      <p class="article-description"><?php echo $description;?></p>
+      <div class="article-description"><?php echo $description;?></div>
     <?php
     }
   ?>
