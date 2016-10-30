@@ -55,14 +55,14 @@ function print_loop(){
 
 	/* START - Print Co-Branding */
 	$cobranding_args = array(
-		'post_type'  => 'print_cobrands',
+		'post_type'  => 'print_cobrandings',
 		'orderby'=> 'menu_order',
 		'order', 'ASC',
 	);
 
-	$printcobrands = new WP_Query($cobranding_args);
-	if(($printcobrands -> have_posts()) && (is_page( 'cobranding' ))) {
-		while($printcobrands -> have_posts()): $printcobrands ->the_post();
+	$printcobrandings = new WP_Query($cobranding_args);
+	if(($printcobrandings -> have_posts()) && (is_page( 'cobranding' ))) {
+		while($printcobrandings -> have_posts()): $printcobrandings ->the_post();
 			get_template_part( '/includes/dls_cpt' );
 		endwhile;
 	}

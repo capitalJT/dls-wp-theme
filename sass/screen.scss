@@ -23,6 +23,7 @@
 @import "components/search";
 @import "components/post-list-item";
 @import "components/title-slide";
+@import "components/scroll-to-top";
 
 @import "layout/site-header";
 @import "layout/sidebar";
@@ -119,7 +120,7 @@ pre{
 .tab-size {
   -webkit-tab-size: 2 !important;
      -moz-tab-size: 2 !important;
-       -o-tab-size: 2 !important;
+       -o-tab-size: 2 !important; 
           tab-size: 2 !important;
 }
 

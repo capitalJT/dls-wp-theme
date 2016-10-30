@@ -1,32 +1,8 @@
 ( function ( document, $, undefined ) {
-	
-	// # Contents
-	// - Smooth scroll sidebar
-	// - Searchbar toggle 
 
 	$(document).ready(function(){
-		// if ($('.elements-sidebar').length){
-			// $(".textwidget").text("holy shit");
-			// $('.textwidget').append('<ul id="contents-list"></ul>');
-
-			// var someList = $(".component-title");
-			// console.log(someList);
-			// for (i = 0; i < someList.length; i++) {
-			//   // $("#contents-list").append("<li>" +  someList[i]+ "</li>");
-			//   // var parentId = someList[i].parent().parent().attr('id');
-			//   var parentId = someList[i].parent();
-			//   console.log(parentId);
-			// }
-			// $( ".component-title" ).each(function( index ) {
-			  // console.log( index + ": " + $( this ).text() );
-			//   	var theText = $( this ).text();
-			//   	var theId = $(this).parent().attr('id');
-			//    $("#contents-list").append('<li><a href="#'+theId+'">'  + theText + '</a></li>');
-			// });
-		// }
-
 		if ($('.dls-sidebar').length){
-			$('.textwidget').append('<ul id="rendered-sections-list"></ul>');
+			$('.article-list-wrapper').append('<ul id="rendered-sections-list"></ul>');
 
 			$( ".article-title" ).each(function( index ) {
 		  	var theText = $(this).text();
@@ -35,31 +11,21 @@
 
 		  	
 		  	if (theSbt){
-		  		
 		  		if (!$(this).parent().hasClass('article-list-item')){
 		  			$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theSbt + '</a></li>');
-			  		// console.log(this, "shit dick");
 			  	} else {
 			  		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theSbt + '</a></li>');
 			  	}
 		  	} 
-		  	// else {
-		  		
-		  	// 	if (!$(this).parent().hasClass('article-list-item')){
-		  	// 		$("#rendered-sections-list").append('<li><a href="#'+theId+'" class="ancestor">'  + theId + '</a></li>');
-			  // 		// console.log(this, "shit dick");
-			  // 	} else {
-			  // 		$("#rendered-sections-list").append('<li><a href="#'+theId+'">'  + theId + '</a></li>');
-			  // 	}
-		  	// }
 			});
+
+			$('.article-list-wrapper').append('<div id="scroll-to-top">Scroll To Top</div>');
 		}
 
 		$('#genesis-footer-widgets .footer-widgets-1').wrapInner('<div class="dls-container"></div>');
 
 		var dlsWidgetWrappers = $('<div class="dls-widget-outer-wrapper"><div class="dls-widget-inner-wrapper"></div></div>');
 
-		// dlsWidgetWrappers.appendTo('#genesis-footer-widgets .wrap');
 		$('#genesis-footer-widgets .wrap').append(dlsWidgetWrappers);
 
 		var widgies = $(".footer-widgets-2, .footer-widgets-3 ").detach();
@@ -79,11 +45,11 @@
 		$(window).scroll(function(){
 		  var $scrollTop = $(window).scrollTop();
 
-		  // if( $scrollTop > header_height ){
-		  //     scroll_top_icon.fadeIn();
-		  // } else {
-		  //     scroll_top_icon.fadeOut();
-		  // }
+		  if( $scrollTop > header_height ){
+		      scroll_top_icon.fadeIn();
+		  } else {
+		      scroll_top_icon.fadeOut();
+		  }
 		  
 		  if( $scrollTop > combined_height + sipt ){
 		    nav.addClass( 'sticky-sidebar' );
@@ -130,6 +96,12 @@
 
 		});
 
+		// Scroll to top function 2/2
+		scroll_top_icon.click(function(){
+		  var body = $("html, body");
+		  body.animate({scrollTop:0}, '500', 'swing');
+		});
+
 		// - Smooth scroll sidebar
 		nav.find('a').on('click', function () {
 		  var $el = $(this), 
@@ -147,7 +119,7 @@
 		  $("#searchbar-collapse").slideToggle(180, "swing");
 		});
 
-		// rearrange sidebar
+		// - Rearrange sidebar
 		$(".dls-sidebar").insertBefore("#genesis-content");
 
 	});

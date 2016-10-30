@@ -1,0 +1,12 @@
+#scroll-to-top{
+  padding-top: $global-padding;
+  margin-top: $global-margin;
+  border-top: solid thin $light-gray;
+  display: none;
+  font-weight: bold;
+  transition: color ease 0.3s;
+  &:hover{
+    cursor:pointer;
+    color: $secondary-color;
+  }
+}
