@@ -12,3 +12,7 @@ Github project link: https://github.com/copyblogger/genesis-sample
 
 ## Theme Support
 Please visit http://jabaltorres.com for theme support.
+
+## Local Dev Setup
+Node.js and Gulp.js are required for local development  
+
