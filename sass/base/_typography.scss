@@ -63,8 +63,39 @@
   font-family: 'Helvetica-Neue-LT-Roman';
 }
 
+@font-face {
+  font-family: 'Dinot-Light';
+  src: url('../fonts/DINOT/DINOT-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Dinot-Medium';
+  src: url('../fonts/DINOT/DINOT-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Dinot-Black';
+  src: url('../fonts/DINOT/DINOT-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Dinot-Bold';
+  src: url('../fonts/DINOT/DINOT-Bold.otf') format('opentype');
+}
+
+.dinot-light, .dinot-light p{
+  font-family: 'DINOT-Light';
+}
+
+.dinot-medium, .dinot-medium p{
+  font-family: 'DINOT-Medium';
+}
+.dinot-black, .dinot-black p{
+  font-family: 'DINOT-Bold';
+}
+
+.dinot-bold, .dinot-bold p{
+  font-family: 'DINOT-Bold';
+}
  // The font stack
-$body-font-family: 'Helvetica-Neue-LT-Regular', Helvetica, Arial, sans-serif;
+$body-font-family: 'Dinot-Medium', Helvetica, Arial, sans-serif;
 $header-font-family: $body-font-family;
 $default-font-weight: 100;
 $font-weight-bold: bold;
